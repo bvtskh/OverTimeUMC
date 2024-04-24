@@ -1,0 +1,316 @@
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\OverTime.exe.config
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\OverTime.exe
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\OverTime.pdb
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\EntityFramework.dll
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\EntityFramework.SqlServer.dll
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\Microsoft.mshtml.dll
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\EntityFramework.xml
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\EntityFramework.SqlServer.xml
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.csprojResolveAssemblyReference.cache
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.Form1.resources
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormInput.resources
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.Properties.Resources.resources
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.csproj.GenerateResource.Cache
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.exe
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.pdb
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\CheckBoxComboBox.pdb
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormTest.resources
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\BouncyCastle.Crypto.dll
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.dll
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OOXML.dll
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXml4Net.dll
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\BouncyCastle.Crypto.xml
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\ICSharpCode.SharpZipLib.pdb
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\ICSharpCode.SharpZipLib.xml
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.pdb
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.xml
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OOXML.pdb
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OOXML.xml
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXml4Net.pdb
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXml4Net.xml
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXmlFormats.pdb
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\EPPlus.dll
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\EPPlus.Interfaces.dll
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\EPPlus.System.Drawing.dll
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\EPPlus.xml
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.TrustInfo.xml
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\OverTime.exe.manifest
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\bin\Debug\OverTime.application
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.exe.manifest
+D:\HAI\DATA\LCA SOFTWARE\OneDrive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.application
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\OverTime.exe.config
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\OverTime.exe.manifest
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\OverTime.application
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\OverTime.exe
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\OverTime.pdb
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\BouncyCastle.Crypto.dll
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\EntityFramework.dll
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\EntityFramework.SqlServer.dll
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\EPPlus.dll
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\EPPlus.Interfaces.dll
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\EPPlus.System.Drawing.dll
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\FontAwesome.Sharp.dll
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.dll
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OOXML.dll
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXml4Net.dll
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXmlFormats.dll
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\Microsoft.mshtml.dll
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\BouncyCastle.Crypto.xml
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\EntityFramework.xml
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\EntityFramework.SqlServer.xml
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\EPPlus.xml
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.pdb
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.xml
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OOXML.pdb
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OOXML.xml
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXml4Net.pdb
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXml4Net.xml
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXmlFormats.pdb
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormSepcialAdjustOT.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormHistoryRegistration.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormMasterShift.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormAddJobPC.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormHistoryAdjustOT.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormEditOTPreShift.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormRetrictOT.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormUser.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormBudgetOT.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormGAWorkSpace.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormCheckAndApprove.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormOTBeforeShift.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormInput.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormInputFingerPrint.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormEditOverTime.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormTest.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.Form1.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormRegister.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.Properties.Resources.resources
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.csproj.GenerateResource.Cache
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.TrustInfo.xml
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.exe.manifest
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.application
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.exe
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.pdb
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\OverTime.exe.config
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\OverTime.exe.manifest
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\OverTime.application
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\OverTime.exe
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\OverTime.pdb
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\BouncyCastle.Crypto.dll
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\EntityFramework.dll
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\EntityFramework.SqlServer.dll
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\EPPlus.dll
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\EPPlus.Interfaces.dll
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\EPPlus.System.Drawing.dll
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\FontAwesome.Sharp.dll
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.dll
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OOXML.dll
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXml4Net.dll
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXmlFormats.dll
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\Microsoft.mshtml.dll
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\BouncyCastle.Crypto.xml
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\EntityFramework.xml
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\EntityFramework.SqlServer.xml
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\EPPlus.xml
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.pdb
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.xml
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OOXML.pdb
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OOXML.xml
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXml4Net.pdb
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXml4Net.xml
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXmlFormats.pdb
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.csproj.AssemblyReference.cache
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.csproj.SuggestedBindingRedirects.cache
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormSepcialAdjustOT.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormHistoryRegistration.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormMasterShift.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormAddJobPC.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormHistoryAdjustOT.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormEditOTPreShift.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormRetrictOT.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormUser.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormBudgetOT.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormGAWorkSpace.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormCheckAndApprove.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormOTBeforeShift.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormInput.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormInputFingerPrint.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormEditOverTime.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormTest.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.Form1.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.FormRegister.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.Properties.Resources.resources
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.csproj.GenerateResource.cache
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.csproj.CoreCompileInputs.cache
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.TrustInfo.xml
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.exe.manifest
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.application
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.csproj.CopyComplete
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.exe
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.pdb
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.csprojAssemblyReference.cache
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.csproj.CoreCompileInputs.cache
+G:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.csproj.CopyComplete
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\WaitWnd.dll
+H:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\WaitWnd.pdb
+G:\My Drive\35. OverTime\OverTime\OverTime\bin\Debug\WaitWnd.pdb
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\OverTime.exe.config
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\OverTime.exe.manifest
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\OverTime.application
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\OverTime.exe
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\OverTime.pdb
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\BouncyCastle.Crypto.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\EntityFramework.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\EntityFramework.SqlServer.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\EPPlus.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\EPPlus.Interfaces.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\EPPlus.System.Drawing.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\FontAwesome.Sharp.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.OOXML.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXml4Net.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\Microsoft.mshtml.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\BouncyCastle.Crypto.xml
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\EntityFramework.xml
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\EntityFramework.SqlServer.xml
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\EPPlus.xml
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.pdb
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.xml
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.OOXML.pdb
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.OOXML.xml
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXml4Net.pdb
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXml4Net.xml
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXmlFormats.pdb
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.csprojAssemblyReference.cache
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormSepcialAdjustOT.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormHistoryRegistration.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormMasterShift.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormAddJobPC.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormHistoryAdjustOT.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormEditOTPreShift.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormRetrictOT.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormUser.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormBudgetOT.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormGAWorkSpace.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormCheckAndApprove.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormOTBeforeShift.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormInput.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormInputFingerPrint.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormEditOverTime.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormTest.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.Form1.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormRegister.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.Properties.Resources.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.csproj.GenerateResource.cache
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.csproj.CoreCompileInputs.cache
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.TrustInfo.xml
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.exe.manifest
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.application
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.csproj.CopyComplete
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.exe
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.pdb
+H:\My Drive\35. OverTime\OverTime\OverTime\obj\Debug\OverTime.MsgBox_AQ.FormMessageBox.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\MiniExcel.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\FluentFTP.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\Dapper.Contrib.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\Dapper.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\CommonProject.pdb
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\Dapper.xml
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\AdvancedDataGridView.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\SunnyUI.Common.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\SunnyUI.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormBalanceFCOT.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormHumanOT.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormMain.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormFCOT.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.MsgBox_AQ.FormMessageBox.resources
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\PI_Lib.dll
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\CommonProject.exe
+D:\18.HOANHT\Phan-Mem-Cua-Cong-Ty\C#\36 OverTime\OverTime\OverTime\bin\Debug\CommonProject.exe.config
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\OverTime.exe.config
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\OverTime.exe.manifest
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\OverTime.application
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\OverTime.exe
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\OverTime.pdb
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\AdvancedDataGridView.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\CommonProject.exe
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\EntityFramework.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\EPPlus.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\MiniExcel.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.OOXML.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\PI_Lib.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\SunnyUI.Common.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\SunnyUI.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\FluentFTP.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\Dapper.Contrib.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\Dapper.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\Microsoft.mshtml.dll
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\CommonProject.pdb
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\CommonProject.exe.config
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\EntityFramework.xml
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\EPPlus.xml
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.pdb
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.xml
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.OOXML.pdb
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.OOXML.xml
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXml4Net.pdb
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXml4Net.xml
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\NPOI.OpenXmlFormats.pdb
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.csproj.AssemblyReference.cache
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormBalanceFCOT.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormHumanOT.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormMain.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormFCOT.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormSepcialAdjustOT.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormHistoryRegistration.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormMasterShift.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormAddJobPC.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormHistoryAdjustOT.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormEditOTPreShift.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormRetrictOT.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormUser.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormBudgetOT.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormGAWorkSpace.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormCheckAndApprove.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormOTBeforeShift.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormInput.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormInputFingerPrint.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormEditOverTime.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormTest.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.Form1.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormRegister.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.MsgBox_AQ.FormMessageBox.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.Properties.Resources.resources
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.csproj.GenerateResource.cache
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.csproj.CoreCompileInputs.cache
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.TrustInfo.xml
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.exe.manifest
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.application
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.exe
+C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.pdb
+C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.csproj.Up2Date
+C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormPreferentialDaysOff.resources
+C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormForgetFingerprints.resources
+C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormApplyForLeave.resources
+C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.Button_AQ.AQButton.resources
+C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormInputShitfCa.resources
+C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\ExcelDataReader.dll
+C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\ExcelDataReader.pdb
+C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\ExcelDataReader.xml
+C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormStatistic.resources
