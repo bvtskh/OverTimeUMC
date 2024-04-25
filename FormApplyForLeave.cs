@@ -15,6 +15,7 @@ namespace OverTime
         public FormApplyForLeave()
         {
             InitializeComponent();
+            MessageBox.Show("");
         }
     }
 }
