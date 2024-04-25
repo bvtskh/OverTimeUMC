@@ -39,7 +39,7 @@ namespace OverTime
             else
             {
                 //string paratest = "PURLeader|*PUR-13|PUR & LOG";
-                string paratest = "DXLeader|umc@123|PI - DX";
+               // string paratest = "DXLeader|umc@123|PI - DX";
                 //string paratest = "22878|umcvn@123|QA-REPAIR|QA - ISO|QA - QC";
                 //string paratest = "483|umcvn1|ACC - ACC|ACC - AC";
                 //string paratest = "23702|umc@123|PI - DX";
@@ -57,7 +57,7 @@ namespace OverTime
                 //string paratest = "UJ00070|umcvn|SALES|SALES - BC";
                 //string paratest = "231|umcvn|SALES|SALES - BC";
                 //string paratest = "29797|umcvn|PD|PD-OFFICE";
-                //string paratest = "22636|250494|PD|PD-OFFICE";
+                string paratest = "22636|250494|PD|PD-OFFICE";
                 //string paratest = "39298|ngocanh12|PUR & LOG";
                 //string paratest = "349|umcvn|PUR & LOG";
                 //string paratest = "23138|umcvn|PUR & LOG";

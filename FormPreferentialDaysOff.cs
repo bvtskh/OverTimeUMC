@@ -20,9 +20,12 @@ namespace OverTime
 {
     public partial class FormPreferentialDaysOff : Form
     {
+        BackgroundWorker workerUpdateDayOff;
         public FormPreferentialDaysOff()
         {
             InitializeComponent();
+            InitBackgroundWorker();
+
         }
 
         private void FormPreferentialDaysOff_Load(object sender, EventArgs e)
@@ -53,7 +56,23 @@ namespace OverTime
             {
                 throw;
             }
-            
+
+            workerUpdateDayOff = new BackgroundWorker();
+            workerUpdateDayOff.RunWorkerAsync();
+
+        }
+
+        private void InitBackgroundWorker()
+        {
+            workerUpdateDayOff = new BackgroundWorker();
+            workerUpdateDayOff.DoWork += new DoWorkEventHandler(DoWork_UpdateDayOff);
+            workerUpdateDayOff.RunWorkerAsync();
+        }
+
+        private void DoWork_UpdateDayOff(object sender, DoWorkEventArgs e)
+        {
+            DayOffHelper dayOffHelper = new DayOffHelper();
+            dayOffHelper.UpdateDayOff();
         }
         private void ShowData(string conn, string staffcode, string dept)
         {

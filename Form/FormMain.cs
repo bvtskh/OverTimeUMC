@@ -23,12 +23,12 @@ namespace OverTime
         private string _version;
         private string para;
         public string USERNAME { get; set; }
-        BackgroundWorker workerUpdateDayOff;
+
         BackgroundWorker workerInstance;
         public FormMain(string para)
         {
             InitializeComponent();
-            InitBackgroundWorker();
+
             this.para = para;
             if (para.Length > 0)
             {
@@ -112,19 +112,6 @@ namespace OverTime
                     }
                 }
             }
-        }
-
-        private void InitBackgroundWorker()
-        {
-            workerUpdateDayOff = new BackgroundWorker();
-            workerUpdateDayOff.DoWork += new DoWorkEventHandler(DoWork_UpdateDayOff);
-            workerUpdateDayOff.RunWorkerAsync();
-        }
-
-        private void DoWork_UpdateDayOff(object sender, DoWorkEventArgs e)
-        {
-            DayOffHelper dayOffHelper = new DayOffHelper();
-            dayOffHelper.UpdateDayOff();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -354,14 +341,6 @@ namespace OverTime
         {
             System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
             CheckSpecialApprove();
-            workerUpdateDayOff = new BackgroundWorker();
-            workerUpdateDayOff.DoWork += new DoWorkEventHandler(DoWork_InitInstance);
-            workerUpdateDayOff.RunWorkerAsync();
-        }
-
-        private void DoWork_InitInstance(object sender, DoWorkEventArgs e)
-        {
-             GAMankuchiAll.Instance();
         }
 
         private void CheckSpecialApprove()
