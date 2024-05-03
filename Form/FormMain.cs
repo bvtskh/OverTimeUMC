@@ -1,5 +1,6 @@
 ﻿using CommonProject;
 using CommonProject.Loading.LoadingClass;
+using Org.BouncyCastle.Asn1.Cms;
 using OverTime.Business;
 using OverTime.DataBase;
 using Sunny.UI;
@@ -341,6 +342,19 @@ namespace OverTime
         {
             System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
             CheckSpecialApprove();
+            BackgroundLoading BL = new BackgroundLoading(GetData, RequestCompleted);
+            BL.Start(false);
+        }
+
+        private void RequestCompleted(DataTable dt)
+        {
+            
+        }
+
+        private DataTable GetData()
+        {
+            var data = GAMankuchiAll.Instance()._listAllStaff;
+            return new DataTable();
         }
 
         private void CheckSpecialApprove()

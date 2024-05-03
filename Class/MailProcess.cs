@@ -64,8 +64,8 @@ namespace OverTime
         {
             try
             {
-                var task = Task.Run(new Action(() =>
-                {
+                //var task = Task.Run(new Action(() =>
+                //{
                     var toMails = new List<string>();
                     if (!string.IsNullOrEmpty(Common.UserLogin.Email))
                         toMails.Add(Common.UserLogin.Email);
@@ -92,12 +92,12 @@ namespace OverTime
                         }
                     }
                     SendEmail(toMails.Distinct().ToList(), content, subject, true, false, string.Empty);
-                }
-              ));
+                //}
+              //));
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi không gửi được Email, Nhờ chụp ảnh và gửi lại LCA\n\n" + ex);
+                MessageBox.Show("Lỗi không gửi được Email, Nhờ chụp ảnh và gửi lại DX - 2266\n\n" + ex);
                 return;
             }
         }

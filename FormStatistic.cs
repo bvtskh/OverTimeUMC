@@ -1,5 +1,6 @@
 ﻿using CommonProject.Loading.LoadingClass;
 using NPOI.SS.Formula.Functions;
+using Org.BouncyCastle.Crypto.Tls;
 using OverTime.Business;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -65,7 +67,18 @@ namespace OverTime
         }
         private void FormStatistic_Load(object sender, EventArgs e)
         {
-            InitDatatable();
+            Thread thread = new Thread(new ThreadStart(GetDataTableThread));
+            thread.Start();
+            // Waiting for the thread to finish
+            thread.Join();
+        }
+
+        private void GetDataTableThread()
+        {
+            this.BeginInvoke(new Action(() =>
+            {
+                InitDatatable();
+            }));
         }
 
         private DataTable InitDatatable()
@@ -82,8 +95,6 @@ namespace OverTime
                 {
                     table.Columns.Add(new DataColumn("A" + col));
                 }
-
-
                 table.Rows.Add(new object[] { "", "", "", "", "", "", "", "Tổng dự toán theo ngày" });
                 table.Rows.Add(new object[] { "", "", "", "", "", "", "", "Tổng thực tế theo ngày" });
                 table.Rows.Add(new object[] { "", "", "", "", "", "", "", "Chênh lệch theo ngày" });

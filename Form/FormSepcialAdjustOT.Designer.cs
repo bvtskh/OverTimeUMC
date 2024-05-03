@@ -94,7 +94,7 @@
             this.dgvDetailRequest.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDetailRequest.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDetailRequest.EnableHeadersVisualStyles = false;
-            this.dgvDetailRequest.Location = new System.Drawing.Point(0, 353);
+            this.dgvDetailRequest.Location = new System.Drawing.Point(0, 343);
             this.dgvDetailRequest.Name = "dgvDetailRequest";
             this.dgvDetailRequest.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -107,7 +107,7 @@
             this.dgvDetailRequest.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDetailRequest.RowHeadersVisible = false;
             this.dgvDetailRequest.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetailRequest.Size = new System.Drawing.Size(1477, 190);
+            this.dgvDetailRequest.Size = new System.Drawing.Size(1477, 200);
             this.dgvDetailRequest.TabIndex = 0;
             // 
             // dgvRequest
@@ -118,6 +118,7 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(10);
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -232,7 +233,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox1.Controls.Add(this.cbbDept);
@@ -258,9 +259,9 @@
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = global::OverTime.Properties.Resources.search1;
-            this.btnSearch.Location = new System.Drawing.Point(157, 76);
+            this.btnSearch.Location = new System.Drawing.Point(157, 72);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(126, 41);
+            this.btnSearch.Size = new System.Drawing.Size(126, 45);
             this.btnSearch.TabIndex = 242;
             this.btnSearch.Text = "Tìm Kiếm";
             this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -360,6 +361,7 @@
             this.lbRequestNo.Size = new System.Drawing.Size(16, 13);
             this.lbRequestNo.TabIndex = 245;
             this.lbRequestNo.Text = "---";
+            this.lbRequestNo.Visible = false;
             // 
             // panel1
             // 
@@ -423,11 +425,12 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.lbRequestNo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 325);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1477, 28);
+            this.panel2.Size = new System.Drawing.Size(1477, 18);
             this.panel2.TabIndex = 247;
             // 
             // panel3

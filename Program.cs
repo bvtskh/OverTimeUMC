@@ -35,6 +35,7 @@ namespace OverTime
                 }
 
                 Application.Run(new FormMain(para));
+               
             }
             else
             {
@@ -57,15 +58,14 @@ namespace OverTime
                 //string paratest = "UJ00070|umcvn|SALES|SALES - BC";
                 //string paratest = "231|umcvn|SALES|SALES - BC";
                 //string paratest = "29797|umcvn|PD|PD-OFFICE";
-                string paratest = "22636|250494|PD|PD-OFFICE";
+                //string paratest = "22636|250494|PD|PD-OFFICE";
                 //string paratest = "39298|ngocanh12|PUR & LOG";
                 //string paratest = "349|umcvn|PUR & LOG";
                 //string paratest = "23138|umcvn|PUR & LOG";
                 //string paratest = "GALeader|*GA-1";
-               // string paratest = "00716|umcvn";
+                 string paratest = "23378|umcvn";
                 Application.Run(new FormMain(paratest));
-                //Application.Exit();
-                //Application.Run(new FormMain());
+                //Application.Run(new FormLogin());
             }           
         }
 

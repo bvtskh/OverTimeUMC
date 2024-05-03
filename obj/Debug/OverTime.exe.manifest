@@ -320,14 +320,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OverTime.exe" size="9493504">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OverTime.exe" size="9440256">
       <assemblyIdentity name="OverTime" version="1.0.1.7" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>un8Of7BzQDIdcfmi/b3fR1PtyPWFj+ZQIW79IzePd5s=</dsig:DigestValue>
+        <dsig:DigestValue>KNbK/EwGXMNdcsq9MJIS/tuZ0CT8xOPgjBeXNYb0098=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -26,7 +26,7 @@ namespace OverTime.Business
         {
             try
             {
-                var humanInfo = GAMankuchi.Instance()._listCurrentStaff;
+                var humanInfo = GAMankuchiAll.Instance()._listAllStaff;
                 if (typeUser == "Salary" && dept == "ALL")
                 {
                     var deptList = humanInfo.Select(s => s.Dept).Distinct().ToList();

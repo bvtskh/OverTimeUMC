@@ -44,6 +44,12 @@ namespace OverTime
             lbstt.Text = "ĐIỀU CHỈNH TĂNG CA ĐẶC BIỆT - PHÊ DUYỆT";
             ReqNoEdit = ReqNo;
             Mode = mode;
+            using(var context = new DBContext())
+            {
+                var data = context.Tbl_HistoryUpdateOT.Where(w=>w.RequestNo == ReqNo).ToList();
+                dgvHistory.DataSource = data;
+                EditViewDgvHistoryAdjust(dgvHistory);
+            }
         }
 
         private void Init()
@@ -114,15 +120,25 @@ namespace OverTime
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            using (var db = new DBContext())
+            try
             {
-                long RequestNo = 0;
-                long.TryParse(lbReqNo.Text, out RequestNo);
-                lstSpecicalAdjustOT = db.Tbl_HistoryUpdateOT.Where(x => x.RequestNo == RequestNo).ToList();
-                dgvHistory.DataSource = lstSpecicalAdjustOT;
-                EditViewDgvHistoryAdjust(dgvHistory);
-                lbReqNo.Text = lstSpecicalAdjustOT[0].RequestNo.ToString();
+                if (cbbDept.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Vui lòng chọn bộ phận!");
+                    return;
+                }
+                using (var db = new DBContext())
+                {                 
+                    lstSpecicalAdjustOT = db.Tbl_HistoryUpdateOT.Where(x => x.DateAdjust == dateAdjustPicker.Value.Date && x.Dept == cbbDept.Text && x.Status == "Đang điều chỉnh").ToList();
+                    dgvHistory.DataSource = lstSpecicalAdjustOT;
+                    EditViewDgvHistoryAdjust(dgvHistory);
+                    lbReqNo.Text = lstSpecicalAdjustOT[0].RequestNo.ToString();
+                }
             }
+            catch (Exception)
+            {
+                return;             
+            }           
         }
 
         private void EditViewDgvHistoryAdjust( DataGridView dgv)
@@ -208,6 +224,10 @@ namespace OverTime
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if(CovertDouble(txtTimeRegisted.Text) <=0 && CovertDouble(txtTimeAdjust.Text) <= 0)
+            {
+                MessageBox.Show("Thời gian điều chỉnh không hợp lệ!"); return;
+            }
             if(!string.IsNullOrEmpty(txtCode.Text))
             {
                 using (var db = new DBContext())
@@ -255,6 +275,16 @@ namespace OverTime
                     EditViewDgvHistoryAdjust(dgvHistory);                  
                 }
             }
+        }
+
+        private double CovertDouble(string text)
+        {
+            double temp;
+            if(double.TryParse(text, out temp))
+            {
+                return temp;
+            }
+            return 0f;
         }
 
         private long GetNumberRequest()
@@ -386,10 +416,10 @@ namespace OverTime
             }
             if(Mode == "Edit")
             {
+                lbstt.Text = "ĐIỀU CHỈNH TĂNG CA ĐẶC BIỆT - CHỈNH SỬA";
                 tabControl1.SelectedTab = tabAdjust;
                 tabControl1.TabPages.Remove(tabApprove);
                 lbReqNo.Text = ReqNoEdit.ToString();
-                btnSearch_Click(null, null);
             }
             if(Mode == "Approve")
             {
@@ -405,34 +435,31 @@ namespace OverTime
 
         private void InitApprove()
         {
-            Common.RunProcess("LoadTitle.exe");
             int Month = DateTime.Now.Month;
             int Year = DateTime.Now.Year;
             lstMankichi = GAMankuchiAll.Instance()._listAllStaff;
             var lstHumanInfo = lstMankichi.Where(x => x.QuitJob == null).ToList();
-            if (Common.UserLogin.Dept == "ALL" || Common.UserLogin.TypeUser == "Salary")
-            {
-                var lstDept = lstHumanInfo.GroupBy(x => new { x.Dept }).Select(x => new
-                {
-                    Dept = x.Key.Dept,
-                }).ToList();
-                lstDept = lstDept.OrderBy(x => x.Dept).ToList();
-                foreach (var item in lstDept)
-                {
-                    cbbDeptAppr.Items.Add(item.Dept);
-                }
-                cbbDeptAppr.Items.Add("ALL");
-            }
-            else
-            {
+            //if (Common.UserLogin.Dept == "ALL" || Common.UserLogin.TypeUser == "Salary")
+            //{
+            //    var lstDept = lstHumanInfo.GroupBy(x => new { x.Dept }).Select(x => new
+            //    {
+            //        Dept = x.Key.Dept,
+            //    }).ToList();
+            //    lstDept = lstDept.OrderBy(x => x.Dept).ToList();
+            //    foreach (var item in lstDept)
+            //    {
+            //        cbbDeptAppr.Items.Add(item.Dept);
+            //    }
+            //    cbbDeptAppr.Items.Add("ALL");
+            //}
+            //else
+            //{
                 string[] ArrDept = Common.UserLogin.Dept.Split('|').ToArray();
                 foreach (var item in ArrDept)
                 {
                     cbbDeptAppr.Items.Add(item);
                 }
-            }
-            Common.KillProcess("LoadTitle");
-
+            //}
         }
 
         private void txtTimeRegisted_KeyPress(object sender, KeyPressEventArgs e)
@@ -520,36 +547,11 @@ namespace OverTime
                     }
                 }
             }
+            else
+            {
+                MessageBox.Show("Dữ liệu không đúng, không thể gửi mail!");
+            }
         }
-
-        //private void btnApprove_Click(object sender, EventArgs e)
-        //{
-        //    using (var db = new DBContext())
-        //    {
-        //        long ReqNo = 0;
-        //        long.TryParse(lbReqNo.Text, out ReqNo);
-        //        if(ReqNo > 0)
-        //        {
-        //            var lstApprove = db.Tbl_HistoryUpdateOT.Where(x => x.RequestNo == ReqNo).ToList();
-        //            if(lstApprove.Count > 0)
-        //            {
-        //                string sign = Common.UserLogin.UserName + "_" + DateTime.Now.ToString("dd/MM/yyyy_HH:mm:ss");
-        //                foreach (var item in lstApprove)
-        //                {     
-        //                    item.Approve = sign;
-        //                    item.Status = "Đã phê duyệt";
-        //                    db.Entry<Tbl_HistoryUpdateOT>(item).State = System.Data.Entity.EntityState.Modified;
-        //                    db.SaveChanges();
-        //                    UpdateTimeAdjustToSummaryTableOT(item);
-        //                }
-                        
-        //                dgvHistory.DataSource = lstApprove;
-        //                SendEmailConfirmApproved(ReqNo);
-        //                MessageBox.Show("Approve Success!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //            }
-        //        }
-        //    }
-        //}
 
 
         private void SendEmailConfirmApproved(long RequestNo)
@@ -732,6 +734,10 @@ namespace OverTime
         {
             try
             {
+                if(cbbReqNo.SelectedIndex ==-1)
+                {
+                    MessageBox.Show("Chưa chọn Request No!"); return;
+                }
                 using (var db = new DBContext())
                 {
                     long ReqNo = 0;
@@ -751,8 +757,10 @@ namespace OverTime
                                 UpdateTimeAdjustToSummaryTableOT(item);
                             }
 
-                            dgvApprove.DataSource = lstApprove;
-                            EditViewDgvHistoryAdjust(dgvApprove);
+                            dgvApprove.DataSource = null;
+                            dgvApprove.Refresh();
+                            cbbReqNo.SelectedIndex = -1;
+                           // EditViewDgvHistoryAdjust(dgvApprove);
                             SendEmailConfirmApproved(ReqNo);
                             MessageBox.Show("Approve Success!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
@@ -815,8 +823,11 @@ namespace OverTime
                                 UpdateTimeAdjustToSummaryTableOT(item);
                             }
                             db.SaveChanges();
-                            MessageBox.Show("Update Success!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            dgvApprove.DataSource = null;
+                            dgvApprove.Refresh();
+                            cbbReqNo.SelectedIndex = -1;
                             SendEmailConfirmApprovedAllRequest();
+                            MessageBox.Show("Update Success!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                 }

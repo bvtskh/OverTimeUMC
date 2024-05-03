@@ -480,6 +480,9 @@
     <EmbeddedResource Include="FormInputShitfCa.resx">
       <DependentUpon>FormInputShitfCa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPreferentialDaysOff.resx">
       <DependentUpon>FormPreferentialDaysOff.cs</DependentUpon>
     </EmbeddedResource>

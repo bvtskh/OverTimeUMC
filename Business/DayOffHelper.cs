@@ -51,9 +51,9 @@ namespace OverTime.Business
 
         private void InsertDayOffs(DataTable dataTable)
         {
-            //if (DateTime.Now.Day == 28 || DateTime.Now.Day == 29 || DateTime.Now.Day == 30 || DateTime.Now.Day == 31
-            //    || DateTime.Now.Day == 1 || DateTime.Now.Day == 2 || DateTime.Now.Day == 3) // những ngày này GA sẽ cập nhật lại ngày nghỉ
-            //{
+            if (DateTime.Now.Day == 28 || DateTime.Now.Day == 29 || DateTime.Now.Day == 30 || DateTime.Now.Day == 31
+                || DateTime.Now.Day == 1 || DateTime.Now.Day == 2 || DateTime.Now.Day == 3) // những ngày này GA sẽ cập nhật lại ngày nghỉ
+            {
                 List<DAYOFF> dayOffList = new List<DAYOFF>();
                 using (var context = new DBContext())
                 {
@@ -98,7 +98,7 @@ namespace OverTime.Business
                     context.DAYOFFs.AddRange(dayOffList);
                     context.SaveChanges();
                 }
-            //}
+            }
         }
 
         private bool IsExistDayOff(DataRow row)

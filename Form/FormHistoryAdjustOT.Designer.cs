@@ -29,20 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHistoryAdjustOT));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvHistory = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabAdjust = new System.Windows.Forms.TabPage();
-            this.tabApprove = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSendEmail = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.lbReqNo = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.labelID = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbbCode = new Sunny.UI.UIComboBox();
@@ -66,6 +65,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.tabApprove = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lbReqWaitAppr = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -82,15 +82,13 @@
             this.dgvApprove = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbstt = new Sunny.UI.UISmoothLabel();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabAdjust.SuspendLayout();
-            this.tabApprove.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabApprove.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvApprove)).BeginInit();
@@ -100,14 +98,14 @@
             // dgvHistory
             // 
             this.dgvHistory.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistory.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvHistory.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -116,7 +114,7 @@
             this.dgvHistory.Name = "dgvHistory";
             this.dgvHistory.ReadOnly = true;
             this.dgvHistory.RowHeadersVisible = false;
-            this.dgvHistory.Size = new System.Drawing.Size(1167, 349);
+            this.dgvHistory.Size = new System.Drawing.Size(1167, 396);
             this.dgvHistory.TabIndex = 0;
             this.dgvHistory.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvHistory_CellFormatting);
             this.dgvHistory.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvHistory_CellMouseClick);
@@ -152,7 +150,6 @@
             this.tabAdjust.BackColor = System.Drawing.Color.White;
             this.tabAdjust.Controls.Add(this.dgvHistory);
             this.tabAdjust.Controls.Add(this.panel2);
-            this.tabAdjust.Controls.Add(this.panel1);
             this.tabAdjust.Controls.Add(this.groupBox1);
             this.tabAdjust.Location = new System.Drawing.Point(4, 27);
             this.tabAdjust.Name = "tabAdjust";
@@ -161,23 +158,12 @@
             this.tabAdjust.TabIndex = 0;
             this.tabAdjust.Text = "Điều chỉnh Đặc biệt";
             // 
-            // tabApprove
-            // 
-            this.tabApprove.Controls.Add(this.groupBox4);
-            this.tabApprove.Controls.Add(this.groupBox3);
-            this.tabApprove.Location = new System.Drawing.Point(4, 27);
-            this.tabApprove.Name = "tabApprove";
-            this.tabApprove.Padding = new System.Windows.Forms.Padding(3);
-            this.tabApprove.Size = new System.Drawing.Size(1173, 599);
-            this.tabApprove.TabIndex = 1;
-            this.tabApprove.Text = "Phê duyệt ";
-            this.tabApprove.UseVisualStyleBackColor = true;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel2.Controls.Add(this.labelID);
             this.panel2.Controls.Add(this.btnSendEmail);
             this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Controls.Add(this.label5);
@@ -195,6 +181,7 @@
             this.btnSendEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(89)))), ((int)(((byte)(153)))));
             this.btnSendEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSendEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendEmail.ForeColor = System.Drawing.Color.White;
             this.btnSendEmail.Image = ((System.Drawing.Image)(resources.GetObject("btnSendEmail.Image")));
             this.btnSendEmail.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSendEmail.Location = new System.Drawing.Point(956, 5);
@@ -209,54 +196,54 @@
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnSearch.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.Image = global::OverTime.Properties.Resources.search;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(836, 5);
+            this.btnSearch.Location = new System.Drawing.Point(846, 5);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(115, 32);
+            this.btnSearch.Size = new System.Drawing.Size(105, 32);
             this.btnSearch.TabIndex = 44;
             this.btnSearch.Text = "Tìm Kiếm";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(22, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(95, 18);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "Request No: ";
+            // 
             // lbReqNo
             // 
             this.lbReqNo.AutoSize = true;
-            this.lbReqNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(247)))));
-            this.lbReqNo.Location = new System.Drawing.Point(133, 11);
+            this.lbReqNo.BackColor = System.Drawing.Color.Transparent;
+            this.lbReqNo.Location = new System.Drawing.Point(125, 11);
             this.lbReqNo.Name = "lbReqNo";
             this.lbReqNo.Size = new System.Drawing.Size(0, 18);
             this.lbReqNo.TabIndex = 45;
             // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.labelID);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 549);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1167, 47);
-            this.panel1.TabIndex = 262;
-            // 
             // labelID
             // 
             this.labelID.AutoSize = true;
-            this.labelID.Location = new System.Drawing.Point(4, 17);
+            this.labelID.Location = new System.Drawing.Point(380, 11);
             this.labelID.Name = "labelID";
             this.labelID.Size = new System.Drawing.Size(23, 18);
             this.labelID.TabIndex = 261;
             this.labelID.Text = "---";
+            this.labelID.Visible = false;
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox1.Controls.Add(this.cbbCode);
@@ -339,7 +326,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(6, 33);
             this.label10.Name = "label10";
@@ -350,7 +337,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(6, 113);
             this.label4.Name = "label4";
@@ -372,7 +359,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 73);
             this.label1.Name = "label1";
@@ -383,7 +370,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(411, 34);
             this.label2.Name = "label2";
@@ -428,7 +415,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(411, 73);
             this.label3.Name = "label3";
@@ -451,7 +438,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(411, 113);
             this.label12.Name = "label12";
@@ -472,7 +459,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(760, 34);
             this.label7.Name = "label7";
@@ -545,12 +532,25 @@
             this.label8.TabIndex = 43;
             this.label8.Text = "Giờ báo lại";
             // 
+            // tabApprove
+            // 
+            this.tabApprove.Controls.Add(this.groupBox4);
+            this.tabApprove.Controls.Add(this.groupBox3);
+            this.tabApprove.Location = new System.Drawing.Point(4, 27);
+            this.tabApprove.Name = "tabApprove";
+            this.tabApprove.Padding = new System.Windows.Forms.Padding(3);
+            this.tabApprove.Size = new System.Drawing.Size(1173, 599);
+            this.tabApprove.TabIndex = 1;
+            this.tabApprove.Text = "Phê duyệt ";
+            this.tabApprove.UseVisualStyleBackColor = true;
+            // 
             // groupBox4
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
             this.groupBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox4.BackgroundImage")));
-            this.groupBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox4.Controls.Add(this.lbReqWaitAppr);
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Location = new System.Drawing.Point(3, 9);
@@ -586,7 +586,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox3.BackgroundImage")));
-            this.groupBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox3.Controls.Add(this.cbbDeptAppr);
             this.groupBox3.Controls.Add(this.cbbReqNo);
             this.groupBox3.Controls.Add(this.lbStatus);
@@ -621,7 +621,7 @@
             this.cbbReqNo.FormattingEnabled = true;
             this.cbbReqNo.Location = new System.Drawing.Point(276, 25);
             this.cbbReqNo.Name = "cbbReqNo";
-            this.cbbReqNo.Size = new System.Drawing.Size(116, 24);
+            this.cbbReqNo.Size = new System.Drawing.Size(95, 24);
             this.cbbReqNo.TabIndex = 261;
             this.cbbReqNo.SelectedIndexChanged += new System.EventHandler(this.cbbReqNo_SelectedIndexChanged);
             // 
@@ -649,13 +649,13 @@
             // 
             // btnRejectOne
             // 
-            this.btnRejectOne.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRejectOne.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnRejectOne.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnRejectOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRejectOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRejectOne.Image = ((System.Drawing.Image)(resources.GetObject("btnRejectOne.Image")));
             this.btnRejectOne.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRejectOne.Location = new System.Drawing.Point(618, 472);
+            this.btnRejectOne.Location = new System.Drawing.Point(8, 471);
             this.btnRejectOne.Name = "btnRejectOne";
             this.btnRejectOne.Size = new System.Drawing.Size(143, 33);
             this.btnRejectOne.TabIndex = 260;
@@ -672,7 +672,7 @@
             this.btnApproveAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApproveAll.Image = ((System.Drawing.Image)(resources.GetObject("btnApproveAll.Image")));
             this.btnApproveAll.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnApproveAll.Location = new System.Drawing.Point(869, 472);
+            this.btnApproveAll.Location = new System.Drawing.Point(157, 471);
             this.btnApproveAll.Name = "btnApproveAll";
             this.btnApproveAll.Size = new System.Drawing.Size(143, 33);
             this.btnApproveAll.TabIndex = 260;
@@ -695,15 +695,15 @@
             this.btnApproveOne.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnApproveOne.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnApproveOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApproveOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApproveOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApproveOne.Image = ((System.Drawing.Image)(resources.GetObject("btnApproveOne.Image")));
-            this.btnApproveOne.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnApproveOne.Location = new System.Drawing.Point(1018, 472);
+            this.btnApproveOne.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnApproveOne.Location = new System.Drawing.Point(1025, 472);
             this.btnApproveOne.Name = "btnApproveOne";
-            this.btnApproveOne.Size = new System.Drawing.Size(143, 33);
+            this.btnApproveOne.Size = new System.Drawing.Size(136, 33);
             this.btnApproveOne.TabIndex = 260;
             this.btnApproveOne.Text = "APPROVE";
-            this.btnApproveOne.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnApproveOne.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnApproveOne.UseVisualStyleBackColor = false;
             this.btnApproveOne.Click += new System.EventHandler(this.btnApproveOne_Click);
             // 
@@ -722,14 +722,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvApprove.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvApprove.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvApprove.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvApprove.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvApprove.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvApprove.EnableHeadersVisualStyles = false;
@@ -754,7 +754,7 @@
             // 
             // lbstt
             // 
-            this.lbstt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(247)))), ((int)(((byte)(246)))));
+            this.lbstt.BackColor = System.Drawing.Color.Transparent;
             this.lbstt.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbstt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbstt.Location = new System.Drawing.Point(0, 0);
@@ -764,16 +764,6 @@
             this.lbstt.TabIndex = 0;
             this.lbstt.Text = "ĐIỀU CHỈNH TĂNG CA ĐẶC BIỆT - TẠO MỚI";
             this.lbstt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(250)))), ((int)(((byte)(247)))));
-            this.label5.Location = new System.Drawing.Point(22, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 18);
-            this.label5.TabIndex = 45;
-            this.label5.Text = "Request No: ";
             // 
             // FormHistoryAdjustOT
             // 
@@ -790,13 +780,11 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabAdjust.ResumeLayout(false);
-            this.tabApprove.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabApprove.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -855,7 +843,6 @@
         private System.Windows.Forms.Label lbDept;
         private Sunny.UI.UIComboBox cbbCode;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private Sunny.UI.UISmoothLabel lbstt;
         private System.Windows.Forms.Label label5;
