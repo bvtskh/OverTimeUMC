@@ -237,7 +237,6 @@ C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\
 C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\OverTime.pdb
 C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\AdvancedDataGridView.dll
 C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\CommonProject.exe
 C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\EntityFramework.dll
 C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\U42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\EPPlus.dll
@@ -316,3 +315,5 @@ C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\
 C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormStatistic.resources
 C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormLogin.resources
 C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\Dapper.xml
+C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\CommonProject.dll
+C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\CommonProject.dll.config

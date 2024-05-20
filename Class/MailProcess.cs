@@ -46,8 +46,9 @@ namespace OverTime
 
                 SmtpClient client = new SmtpClient("smtp.office365.com", 587);
                 client.EnableSsl = true;
+
                 //client.Credentials = new System.Net.NetworkCredential("LCA_Program_Group@umcvn.com", "Lcagroup2021"); //"LCA_Program_Group@umcvn.com",""
-                client.Credentials = new System.Net.NetworkCredential("DXsystem@umcvn.com", "Lca@12345");
+                client.Credentials = new System.Net.NetworkCredential("DXsystem@umcvn.com", "Lca@12345"); // thay đổi mail DX
                 client.Send(message);
 
                 message.Dispose();

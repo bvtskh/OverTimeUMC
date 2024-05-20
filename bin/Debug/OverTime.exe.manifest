@@ -80,14 +80,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CommonProject.exe" size="1555456">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CommonProject.dll" size="1553920">
       <assemblyIdentity name="CommonProject" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>EumNab4E0orrmHKlCrHRYtIkfX6r94L8ft1sIaJmO8w=</dsig:DigestValue>
+        <dsig:DigestValue>Fz7YFaW1R4tAYn6R2klLNoVtxCWWl3kQxQEfd+TkqEw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -327,7 +327,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>w5aYhriszjPSlkXGPEcbqIXxDLFaDSGN9KeiZZJn5t0=</dsig:DigestValue>
+        <dsig:DigestValue>Ja9zad4lXwNab119eYlQZRSdyTj3YJXzyyRFH7CYT+I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
