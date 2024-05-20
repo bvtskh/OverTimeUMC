@@ -26,7 +26,9 @@ namespace OverTime.Business
         {
             try
             {
-                var humanInfo = GAMankuchiAll.Instance()._listAllStaff;
+                var firtDayOfMonth = new DateTime(DateTime.Now.Year,1,1);
+                var beforeTwoMonthAgo = firtDayOfMonth.AddMonths(-2);
+                List<Tbl_Mankichi_Entity> humanInfo = GAMankuchiAll.Instance()._listAllStaff.Where(w=> w.QuitJob == null || w.QuitJob>= beforeTwoMonthAgo).ToList();
                 if (typeUser == "Salary" && dept == "ALL")
                 {
                     var deptList = humanInfo.Select(s => s.Dept).Distinct().ToList();
@@ -54,6 +56,46 @@ namespace OverTime.Business
                 throw;
             }          
         }
+
+        //private static List<Tbl_Mankichi_Entity> GetStaffStatisticList()
+        //{
+        //    SQLHelper.ConnectString(new GAConfig());
+        //    using (SqlConnection connection = new SqlConnection(SQLHelper.CONNECTION_STRINGS))
+        //    {
+        //        connection.Open();
+        //        using (SqlCommand command = new SqlCommand("DX_GetStaffCurrentAndTwoMonthAgo", connection))
+        //        {
+        //            // Specify that the command is a stored procedure
+        //            command.CommandType = CommandType.StoredProcedure;
+
+        //            // Create a SqlDataAdapter to fill the DataTable
+        //            using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+        //            {
+        //                DataTable dataTable = new DataTable();
+        //                adapter.Fill(dataTable);
+
+        //                List<Tbl_Mankichi_Entity> resultList = new List<Tbl_Mankichi_Entity>();
+
+        //                foreach (DataRow row in dataTable.Rows)
+        //                {
+        //                    Tbl_Mankichi_Entity instance = new Tbl_Mankichi_Entity();
+
+        //                    // Assuming your class has properties corresponding to column names
+        //                    instance.AltCode = row["AltCode"];
+        //                    instance.Name = row["Name"];
+        //                    instance.Dept = row["Column2"];
+        //                    instance.Customer = row["Column2"];
+        //                    instance.Direct_Indirect = row["Column2"];
+        //                    // Map other properties similarly...
+
+        //                    resultList.Add(instance);
+        //                }
+
+        //            }
+        //        }
+        //    }
+        //    return null;
+        //}
 
         private static void GetOverTimeDataRow(List<Tbl_Mankichi_Entity> listUserOfDept, DataTable dataMaster, DateTime date, List<string> deptList)
         {
@@ -96,6 +138,7 @@ namespace OverTime.Business
                         {
                             // Fill the DataTable with the results of the stored procedure
                             adapter.Fill(dataTable);
+                            var row = dataTable.Rows[dataTable.Rows.Count - 1];
                         }
                         if (dataTable.Rows.Count > 0)
                         {                           

@@ -399,7 +399,7 @@ namespace OverTime
                 var DeptPara = Dept.Replace(" ", "");
                 var subject = string.Format("[OVER TIME] Phê Duyệt Tăng ca bộ phận {0}", cbbDept.Text);
                 string PathRunPara = string.Format("{0}|{1} {2} ", Common.PathAppRun, "Approve", dtDateOverTime.Value.Date.ToString("dd/MMM/yyyy"));
-                var content = string.Format("Dear Trưởng BP {3} </br> Vui lòng vào phê duyệt tăng ca của bộ phận: {0} ngày {1} </br></br><a href=\"{2}\">{4}[CLICK HERE TO OPEN SOFTWARE]</a></br></br>Thanks!", cbbDept.Text, dtDateOverTime.Value.Date.ToString("dd/MMM/yyyy"), PathRunPara, DeptPara, PathRunPara);
+                var content = string.Format("Dear Trưởng BP {3} </br> Vui lòng vào phê duyệt tăng ca của bộ phận: {0} ngày {1} </br></br><a href=\"{2}\">{4}[CLICK HERE TO OPEN SOFTWARE]</a></br></br>Thanks!", cbbDept.Text, dtDateOverTime.Value.Date.ToString("dd/MMM/yyyy"), PathRunPara, DeptPara, PathRunPara);             
                 MailProcess.SendEmail(Dept, subject, content);
                 MessageBox.Show("Send Email", "Thông Báo");
             }
@@ -409,7 +409,6 @@ namespace OverTime
                 return;
             }
         }
-
 
         private void SendEmailConfirmApproved()
         {

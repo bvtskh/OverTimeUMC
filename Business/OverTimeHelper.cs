@@ -1,5 +1,6 @@
 ﻿using CommonProject.Business;
 using CommonProject.Entities;
+using NPOI.SS.Formula.Functions;
 using OverTime.DataBase;
 using OverTime.MsgBox_AQ;
 using PI_Lib.Entities;
@@ -71,7 +72,7 @@ namespace OverTime.Business
                     if (allMonth)
                     {
                         var firstMonth = new DateTime(DateSelect.Year, DateSelect.Month, 1);
-                        var endMonth = firstMonth.AddMonths(1).AddDays(-1);
+                        var endMonth = DateSelect;
                         lstSearch = db.Tbl_DailyOverTime.Where(x => x.DateOverTime >= firstMonth && x.DateOverTime <= endMonth).ToList();
                     }
                     else
@@ -88,7 +89,7 @@ namespace OverTime.Business
                     }
                     var lstRegisted = (from r in lstSearch
                                        join k in lstMankichiJoin on r.Code equals k.AltCode
-                                       where r.TimeOTDept != 0 || r.TimeRegisted != 0
+                                       where r.TimeOTDept != 0 || r.TimeRegisted != 0   
                                        select new
                                        {
                                            Date = r.DateOverTime,
@@ -103,13 +104,37 @@ namespace OverTime.Business
                                            Reason = r.Reason,
                                            UserRegister = r.UserRegister,
                                        }).OrderBy(m => m.Code).ToList();
+
+                    var resultList = (from i in lstRegisted
+                                      join k in db.Tbl_HistoryUpdateOT.ToList()
+                                        on new { Code = i.Code, Date = i.Date } equals new { Code = k.Code, Date = k.DateAdjust }
+                                        into leftjoin
+                                         from k in leftjoin.DefaultIfEmpty()
+                                         select new 
+                                         {
+
+                                             Date = i.Date,
+                                             Code = i.Code,
+                                             Name = i.Name,
+                                             Direct = i.Direct,
+                                             Position = i.Position,
+                                             Dept = i.Dept,
+                                             Customer = i.Customer,
+                                             TimeRegisted = i.TimeRegisted,
+                                             TimeOTDept = (k != null) ? k.TimeOTUpdate : i.TimeOTDept,
+                                             Reason = i.Reason,
+                                             UserRegister = i.UserRegister,
+                                            
+                                         }).OrderBy(m => m.Code).ToList();
+
+
                     if (!string.IsNullOrEmpty(code))
                     {
-                        lstRegisted = lstRegisted.Where(m => m.Code == code).ToList();
+                        resultList = resultList.Where(m => m.Code == code).ToList();
                     }
                     if (userDK)
                     {
-                        lstRegisted = lstRegisted.Where(m => m.UserRegister == Common.UserLogin.UserName).ToList();
+                        resultList = resultList.Where(m => m.UserRegister == Common.UserLogin.UserName).ToList();
                     }
                     DataTable dt = new DataTable();
 
@@ -123,7 +148,7 @@ namespace OverTime.Business
                     dt.Columns.Add("Lý do", typeof(string));
                     dt.Columns.Add("User ĐK", typeof(string));
                     dt.Columns.Add("Công việc", typeof(string));
-                    foreach (var item in lstRegisted)
+                    foreach (var item in resultList)
                     {
                         dt.Rows.Add(new object[]
                         {
@@ -455,6 +480,8 @@ namespace OverTime.Business
                     List<PI_Lib.Entities.Tbl_Mankichi_Entity> lstHumanDept = new List<PI_Lib.Entities.Tbl_Mankichi_Entity>();
                     if (dept == "PD")
                     {
+                        var a = GAMankuchi.Instance()._listCurrentStaff.ToList();
+                        var a1 = a.Where(w => w.AltCode == "25706").FirstOrDefault();
                         lstHumanDept = GAMankuchi.Instance()._listCurrentStaff.Where(x => x.Dept == dept && x.Customer != null && x.Customer.Contains(CustomerSelect)).ToList();
                     }
                     else
@@ -513,16 +540,26 @@ namespace OverTime.Business
                 var lstCode = lstHumanSearch.Select(m => m.AltCode).ToList();
                 // Load lại dữ liệu đã đang ký tăng ca trên hệ thống
                 var firstMonth = new DateTime(DateSelect.Year, DateSelect.Month, 1);
-                var endMonth = DateSelect.AddMonths(1).AddDays(-1);
+                var endMonth = DateSelect;
                 var lstDailyRegisted = db.Tbl_DailyOverTime.Where(x => x.DateOverTime == DateSelect && lstCode.Contains(x.Code)).ToList();
-                var lstOTAllMonth = db.Tbl_DailyOverTime.Where(m => m.DateOverTime >= firstMonth && m.DateOverTime <= endMonth
-                    && lstCode.Contains(m.Code))
-                    .GroupBy(m => m.Code)
-                    .Select(m => new
-                    {
-                        Code = m.Key,
-                        TotalOverTime = m.Sum(x => x.TimeOTDept)
-                    }).ToList();
+
+                var lstOTAllMonth = (from i in db.Tbl_DailyOverTime.Where(m => m.DateOverTime >= firstMonth && m.DateOverTime <= endMonth
+                       && lstCode.Contains(m.Code)).ToList()
+                                     join k in db.Tbl_HistoryUpdateOT.ToList()
+                                             on new { Code = i.Code, Date = i.DateOverTime } equals new { Code = k.Code, Date = k.DateAdjust }
+                                             into leftjoin
+                                     from k in leftjoin.DefaultIfEmpty()
+                                     select new Tbl_DailyOverTime
+                                     {
+                                         Code = i.Code,
+                                         TimeOTDept = (k != null) ? k.TimeOTUpdate : i.TimeOTDept,
+                                     }).GroupBy(m => m.Code)
+                                         .Select(m => new
+                                         {
+                                             Code = m.Key,
+                                             TotalOverTime = m.Sum(x => x.TimeOTDept)
+                                         }).ToList();
+
                 var lstRetrict = db.Tbl_RestrictOT.Where(x => lstCode.Contains(x.Code) &&
                 (x.DateLimit == null || x.DateLimit.Value >= DateSelect)).ToList();
                 var lst = new List<HistoryDetailOverTime>();
@@ -633,15 +670,25 @@ namespace OverTime.Business
                 }
                 var lstCode = lstAdjustSearch.Select(m => m.Code).ToList();
                 var firstMonth = new DateTime(dateSelect.Year, dateSelect.Month, 1);
-                var endMonth = dateSelect.AddMonths(1).AddDays(-1);
-                var lstOTAllMonth = db.Tbl_DailyOverTime.Where(m => m.DateOverTime >= firstMonth && m.DateOverTime <= endMonth
-                    && lstCode.Contains(m.Code))
-                   .GroupBy(m => m.Code)
-                   .Select(m => new
-                   {
-                       Code = m.Key,
-                       TotalOverTime = m.Sum(x => x.TimeOTDept)
-                   }).ToList();
+                var endMonth = dateSelect;
+
+                var lstOTAllMonth = (from i in db.Tbl_DailyOverTime.Where(m => m.DateOverTime >= firstMonth && m.DateOverTime <= endMonth
+                        && lstCode.Contains(m.Code)).ToList()
+                                     join k in db.Tbl_HistoryUpdateOT.ToList()
+                                             on new { Code = i.Code, Date = i.DateOverTime } equals new { Code = k.Code, Date = k.DateAdjust }
+                                             into leftjoin
+                                     from k in leftjoin.DefaultIfEmpty()                                
+                                     select new Tbl_DailyOverTime
+                                     {
+                                         Code = i.Code,                                       
+                                         TimeOTDept = (k != null) ? k.TimeOTUpdate : i.TimeOTDept,                                     
+                                     }).GroupBy(m => m.Code)
+                                          .Select(m => new
+                                          {
+                                              Code = m.Key,
+                                              TotalOverTime = m.Sum(x => x.TimeOTDept)
+                                          }).ToList();
+
 
                 var list = new List<AdjustOverTime>();
                 foreach (var item in lstAdjustSearch)
@@ -761,15 +808,23 @@ namespace OverTime.Business
                              }).ToList();
                 var lstCode = lstResult.Select(m => m.Code).ToList();
                 var firstMonth = new DateTime(dateSelect.Year, dateSelect.Month, 1);
-                var endMonth = dateSelect.AddMonths(1).AddDays(-1);
-                var lstOTAllMonth = db.Tbl_DailyOverTime.Where(m => m.DateOverTime >= firstMonth && m.DateOverTime <= endMonth
-                    && lstCode.Contains(m.Code))
-                   .GroupBy(m => m.Code)
-                   .Select(m => new
-                   {
-                       Code = m.Key,
-                       TotalOverTime = m.Sum(x => x.TimeOTDept)
-                   }).ToList();
+                var endMonth = dateSelect;
+                var lstOTAllMonth = (from i in db.Tbl_DailyOverTime.Where(m => m.DateOverTime >= firstMonth && m.DateOverTime <= endMonth
+                        && lstCode.Contains(m.Code)).ToList()
+                                     join k in db.Tbl_HistoryUpdateOT.ToList()
+                                             on new { Code = i.Code, Date = i.DateOverTime } equals new { Code = k.Code, Date = k.DateAdjust }
+                                             into leftjoin
+                                     from k in leftjoin.DefaultIfEmpty()
+                                     select new Tbl_DailyOverTime
+                                     {
+                                         Code = i.Code,
+                                         TimeOTDept = (k != null) ? k.TimeOTUpdate : i.TimeOTDept,
+                                     }).GroupBy(m => m.Code)
+                                          .Select(m => new
+                                          {
+                                              Code = m.Key,
+                                              TotalOverTime = m.Sum(x => x.TimeOTDept)
+                                          }).ToList();
 
                 var list = new List<AdjustOverTime>();
                 foreach (var item in lstResult)

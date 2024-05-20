@@ -13,14 +13,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="OverTime.exe.manifest" size="29726">
+    <dependentAssembly dependencyType="install" codebase="OverTime.exe.manifest" size="29728">
       <assemblyIdentity name="OverTime.exe" version="1.0.0.18" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>v13URlhGkYZ9YVVVCnAkgM9T0YLzSK42CsQu5BAQSX4=</dsig:DigestValue>
+        <dsig:DigestValue>hauoS7+E6r8iwEtm5GnC0rL4NZAr6c4MJHVk2/k3ICE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

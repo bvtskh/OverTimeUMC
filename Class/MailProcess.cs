@@ -1,4 +1,5 @@
-﻿using OverTime.DataBase;
+﻿using NPOI.SS.Formula.Functions;
+using OverTime.DataBase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -60,40 +61,39 @@ namespace OverTime
             return result;
         }
 
-        public static void SendEmail(string sendMailTo, string subject, string content)
+        public static void SendEmail(string Dept, string subject, string content)
         {
             try
             {
                 //var task = Task.Run(new Action(() =>
                 //{
-                    var toMails = new List<string>();
-                    if (!string.IsNullOrEmpty(Common.UserLogin.Email))
-                        toMails.Add(Common.UserLogin.Email);
-                    var Dept = sendMailTo;
-                    // lst mail user của bộ phận
-                    var lstEmailUser = GetListUserEmail();
-                    var lstEmailSend = lstEmailUser.Where(x => x.Dept == Dept).ToList();
-                    foreach (var item in lstEmailSend)
-                    {
-                        if(item.Email != null)
+                var toMails = new List<string>();
+                if (!string.IsNullOrEmpty(Common.UserLogin.Email))
+                    toMails.Add(Common.UserLogin.Email);
+                // lst mail user của bộ phận
+                var lstEmailUser = GetListUserEmail();
+                var lstEmailSend = lstEmailUser.Where(x => x.Dept == Dept).ToList();
+                foreach (var item in lstEmailSend)
+                {
+                    if (item.Email != null)
                         toMails.Add(item.Email);
-                    }
-                    //list Mail CC
-                    using (var db = new DBContext())
+                }
+                //list Mail CC
+                using (var db = new DBContext())
+                {
+                    var DeptCC = Dept;
+                    var findMailCCDept = db.Tbl_MailSetting.Where(x => x.Dept == DeptCC || x.Dept == "ALL").ToList();
+                    foreach (var item in findMailCCDept)
                     {
-                        var DeptCC = Dept;
-                        var findMailCCDept = db.Tbl_MailSetting.Where(x => x.Dept == DeptCC || x.Dept == "ALL").ToList();
-                        foreach (var item in findMailCCDept)
+                        if (item.EmailCC != null)
                         {
-                            if (item.EmailCC != null)
-                            {
-                                toMails.Add(item.EmailCC);
-                            }
+                            toMails.Add(item.EmailCC);
                         }
                     }
-                    SendEmail(toMails.Distinct().ToList(), content, subject, true, false, string.Empty);
+                }
+                SendEmail(toMails.Distinct().ToList(), content, subject, true, false, string.Empty);
                 //}
-              //));
+                //));
             }
             catch (Exception ex)
             {
@@ -135,9 +135,6 @@ namespace OverTime
                 return;
             }
         }
-
-
-
 
         public static void SendEmailReject(string sendMailTo, string subject, string content)
         {
@@ -222,7 +219,7 @@ namespace OverTime
                 var lstUser = db.Tbl_User.ToList();
                 foreach (var item in lstUser)
                 {
-                    if(item.Dept != null)
+                    if (item.Dept != null)
                     {
                         string[] DeptArr = item.Dept.Split('|').ToArray();
                         foreach (var itemDept in DeptArr)

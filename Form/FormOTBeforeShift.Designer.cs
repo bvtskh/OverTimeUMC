@@ -32,50 +32,22 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOTBeforeShift));
-            this.btnLoad = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
             this.dgvOTPreShift = new System.Windows.Forms.DataGridView();
-            this.dtTimeOTBeforeShift = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEditOTPreShift = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
             this.btnImportFile = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSaveTimeINOUT = new System.Windows.Forms.Button();
+            this.dtTimeOTBeforeShift = new System.Windows.Forms.DateTimePicker();
+            this.btnLoad = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.uiSmoothLabel1 = new Sunny.UI.UISmoothLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSaveTimeINOUT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOTPreShift)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(151)))), ((int)(((byte)(134)))));
-            this.btnLoad.FlatAppearance.BorderSize = 0;
-            this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoad.ForeColor = System.Drawing.Color.White;
-            this.btnLoad.Image = global::OverTime.Properties.Resources.search1;
-            this.btnLoad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoad.Location = new System.Drawing.Point(242, 9);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(116, 30);
-            this.btnLoad.TabIndex = 246;
-            this.btnLoad.Text = "Tìm kiếm";
-            this.btnLoad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLoad.UseVisualStyleBackColor = false;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(82, 20);
-            this.label12.TabIndex = 242;
-            this.label12.Text = "Thời gian";
             // 
             // dgvOTPreShift
             // 
@@ -113,15 +85,6 @@
             this.dgvOTPreShift.Size = new System.Drawing.Size(1118, 416);
             this.dgvOTPreShift.TabIndex = 241;
             // 
-            // dtTimeOTBeforeShift
-            // 
-            this.dtTimeOTBeforeShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtTimeOTBeforeShift.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtTimeOTBeforeShift.Location = new System.Drawing.Point(98, 9);
-            this.dtTimeOTBeforeShift.Name = "dtTimeOTBeforeShift";
-            this.dtTimeOTBeforeShift.Size = new System.Drawing.Size(138, 29);
-            this.dtTimeOTBeforeShift.TabIndex = 240;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -157,6 +120,17 @@
             this.btnEditOTPreShift.UseVisualStyleBackColor = false;
             this.btnEditOTPreShift.Click += new System.EventHandler(this.btnEditOTPreShift_Click);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(6, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(82, 20);
+            this.label12.TabIndex = 242;
+            this.label12.Text = "Thời gian";
+            // 
             // btnImportFile
             // 
             this.btnImportFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -174,6 +148,58 @@
             this.btnImportFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImportFile.UseVisualStyleBackColor = false;
             this.btnImportFile.Click += new System.EventHandler(this.btnImportFile_Click);
+            // 
+            // dtTimeOTBeforeShift
+            // 
+            this.dtTimeOTBeforeShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtTimeOTBeforeShift.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtTimeOTBeforeShift.Location = new System.Drawing.Point(98, 9);
+            this.dtTimeOTBeforeShift.Name = "dtTimeOTBeforeShift";
+            this.dtTimeOTBeforeShift.Size = new System.Drawing.Size(138, 29);
+            this.dtTimeOTBeforeShift.TabIndex = 240;
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(151)))), ((int)(((byte)(134)))));
+            this.btnLoad.FlatAppearance.BorderSize = 0;
+            this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoad.ForeColor = System.Drawing.Color.White;
+            this.btnLoad.Image = global::OverTime.Properties.Resources.search1;
+            this.btnLoad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLoad.Location = new System.Drawing.Point(242, 9);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(116, 30);
+            this.btnLoad.TabIndex = 246;
+            this.btnLoad.Text = "Tìm kiếm";
+            this.btnLoad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLoad.UseVisualStyleBackColor = false;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel5.Controls.Add(this.uiSmoothLabel1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1118, 51);
+            this.panel5.TabIndex = 254;
+            // 
+            // uiSmoothLabel1
+            // 
+            this.uiSmoothLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(248)))));
+            this.uiSmoothLabel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.uiSmoothLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiSmoothLabel1.Location = new System.Drawing.Point(0, 0);
+            this.uiSmoothLabel1.Name = "uiSmoothLabel1";
+            this.uiSmoothLabel1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(110)))), ((int)(((byte)(222)))));
+            this.uiSmoothLabel1.Size = new System.Drawing.Size(554, 51);
+            this.uiSmoothLabel1.TabIndex = 0;
+            this.uiSmoothLabel1.Text = "NHẬP DỮ LIỆU ĐĂNG KÝ TĂNG CA TRƯỚC GIỜ";
+            this.uiSmoothLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -205,31 +231,6 @@
             this.btnSaveTimeINOUT.UseVisualStyleBackColor = false;
             this.btnSaveTimeINOUT.Click += new System.EventHandler(this.btnSaveTimeINOUT_Click);
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel5.Controls.Add(this.uiSmoothLabel1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1118, 51);
-            this.panel5.TabIndex = 254;
-            // 
-            // uiSmoothLabel1
-            // 
-            this.uiSmoothLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(248)))));
-            this.uiSmoothLabel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.uiSmoothLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiSmoothLabel1.Location = new System.Drawing.Point(0, 0);
-            this.uiSmoothLabel1.Name = "uiSmoothLabel1";
-            this.uiSmoothLabel1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(110)))), ((int)(((byte)(222)))));
-            this.uiSmoothLabel1.Size = new System.Drawing.Size(554, 51);
-            this.uiSmoothLabel1.TabIndex = 0;
-            this.uiSmoothLabel1.Text = "NHẬP DỮ LIỆU ĐĂNG KÝ TĂNG CA TRƯỚC GIỜ";
-            this.uiSmoothLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // FormOTBeforeShift
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,8 +246,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvOTPreShift)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

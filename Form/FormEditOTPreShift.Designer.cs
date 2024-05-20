@@ -32,62 +32,28 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditOTPreShift));
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.cboUser = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.dgvOTPreShift = new System.Windows.Forms.DataGridView();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Regis = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.uiSmoothLabel1 = new Sunny.UI.UISmoothLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cboMonth = new System.Windows.Forms.ComboBox();
             this.cboYear = new System.Windows.Forms.ComboBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.cboUser = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSaveTimeINOUT = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.uiSmoothLabel1 = new Sunny.UI.UISmoothLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOTPreShift)).BeginInit();
+            this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtUser
-            // 
-            this.txtUser.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(198, 54);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(285, 28);
-            this.txtUser.TabIndex = 66;
-            this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
-            // 
-            // cboUser
-            // 
-            this.cboUser.BackColor = System.Drawing.SystemColors.Window;
-            this.cboUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboUser.FormattingEnabled = true;
-            this.cboUser.Location = new System.Drawing.Point(198, 54);
-            this.cboUser.Name = "cboUser";
-            this.cboUser.Size = new System.Drawing.Size(302, 28);
-            this.cboUser.TabIndex = 65;
-            this.cboUser.SelectedIndexChanged += new System.EventHandler(this.cboUser_SelectedIndexChanged);
-            this.cboUser.SelectionChangeCommitted += new System.EventHandler(this.cboUser_SelectionChangeCommitted);
-            this.cboUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cboUser_KeyDown);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(281, 31);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 20);
-            this.label5.TabIndex = 64;
-            this.label5.Text = "Code / Name";
             // 
             // dgvOTPreShift
             // 
@@ -162,25 +128,29 @@
             this.Regis.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Regis.Width = 180;
             // 
-            // label2
+            // panel5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
-            this.label2.TabIndex = 262;
-            this.label2.Text = "Tháng";
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(245)))), ((int)(((byte)(254)))));
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Controls.Add(this.uiSmoothLabel1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(515, 51);
+            this.panel5.TabIndex = 268;
             // 
-            // label4
+            // uiSmoothLabel1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 26);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 20);
-            this.label4.TabIndex = 263;
-            this.label4.Text = "Năm";
+            this.uiSmoothLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(245)))), ((int)(((byte)(254)))));
+            this.uiSmoothLabel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.uiSmoothLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiSmoothLabel1.Location = new System.Drawing.Point(0, 0);
+            this.uiSmoothLabel1.Name = "uiSmoothLabel1";
+            this.uiSmoothLabel1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(110)))), ((int)(((byte)(222)))));
+            this.uiSmoothLabel1.Size = new System.Drawing.Size(483, 51);
+            this.uiSmoothLabel1.TabIndex = 0;
+            this.uiSmoothLabel1.Text = "ĐIỀU CHỈNH / ĐĂNG KÝ TĂNG CA TRƯỚC GIỜ LÀM VIỆC";
+            this.uiSmoothLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -219,6 +189,62 @@
             this.cboYear.Size = new System.Drawing.Size(105, 26);
             this.cboYear.TabIndex = 266;
             // 
+            // txtUser
+            // 
+            this.txtUser.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(198, 54);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(285, 28);
+            this.txtUser.TabIndex = 66;
+            this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
+            // 
+            // cboUser
+            // 
+            this.cboUser.BackColor = System.Drawing.SystemColors.Window;
+            this.cboUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboUser.FormattingEnabled = true;
+            this.cboUser.Location = new System.Drawing.Point(198, 54);
+            this.cboUser.Name = "cboUser";
+            this.cboUser.Size = new System.Drawing.Size(302, 28);
+            this.cboUser.TabIndex = 65;
+            this.cboUser.SelectedIndexChanged += new System.EventHandler(this.cboUser_SelectedIndexChanged);
+            this.cboUser.SelectionChangeCommitted += new System.EventHandler(this.cboUser_SelectionChangeCommitted);
+            this.cboUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cboUser_KeyDown);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(281, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(112, 20);
+            this.label5.TabIndex = 64;
+            this.label5.Text = "Code / Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 20);
+            this.label2.TabIndex = 262;
+            this.label2.Text = "Tháng";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(11, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 20);
+            this.label4.TabIndex = 263;
+            this.label4.Text = "Năm";
+            // 
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
@@ -247,30 +273,6 @@
             this.btnSaveTimeINOUT.UseVisualStyleBackColor = false;
             this.btnSaveTimeINOUT.Click += new System.EventHandler(this.btnSaveTimeINOUT_Click);
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(245)))), ((int)(((byte)(254)))));
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Controls.Add(this.uiSmoothLabel1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(515, 51);
-            this.panel5.TabIndex = 268;
-            // 
-            // uiSmoothLabel1
-            // 
-            this.uiSmoothLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(245)))), ((int)(((byte)(254)))));
-            this.uiSmoothLabel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.uiSmoothLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiSmoothLabel1.Location = new System.Drawing.Point(0, 0);
-            this.uiSmoothLabel1.Name = "uiSmoothLabel1";
-            this.uiSmoothLabel1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(110)))), ((int)(((byte)(222)))));
-            this.uiSmoothLabel1.Size = new System.Drawing.Size(483, 51);
-            this.uiSmoothLabel1.TabIndex = 0;
-            this.uiSmoothLabel1.Text = "ĐIỀU CHỈNH / ĐĂNG KÝ TĂNG CA TRƯỚC GIỜ LÀM VIỆC";
-            this.uiSmoothLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // FormEditOTPreShift
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,10 +288,10 @@
             this.Text = "FormEditOTPreShift";
             this.Load += new System.EventHandler(this.FormEditOTPreShift_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOTPreShift)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -46,9 +46,9 @@ namespace OverTime.Business
                     context.SaveChanges();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw;
+                return;
             }
         }
 

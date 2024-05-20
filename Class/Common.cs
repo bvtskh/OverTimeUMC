@@ -122,7 +122,7 @@ namespace OverTime
         }
 
 
-        public static void CheckVersions(string version)
+        public static void CheckVersions()
         {
             Task.Run(new Action(() =>
             {
@@ -130,16 +130,7 @@ namespace OverTime
                 {
                     var vers = ctx.Tbl_Version.ToList();
                     VersionInfo = vers.LastOrDefault();
-                    PathAppRun = string.Format(VersionInfo.Path, VersionInfo.Version);
-                    //MessageBox.Show("Check Version Info", "Thông Báo");
-                    if (VersionInfo == null) return;
-                    if (VersionInfo.Version != version)
-                    {
-                        string msg = string.Format("Đã lên version {0}. Hãy vào đường dẫn  {1}", VersionInfo.Version, PathAppRun);
-                        MessageBox.Show(msg, "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        Application.Exit();
-                        return;
-                    }
+                    PathAppRun = string.Format(VersionInfo.Path, VersionInfo.Version);                  
                 }
             }));
         }

@@ -224,10 +224,7 @@ namespace OverTime
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(CovertDouble(txtTimeRegisted.Text) <=0 && CovertDouble(txtTimeAdjust.Text) <= 0)
-            {
-                MessageBox.Show("Thời gian điều chỉnh không hợp lệ!"); return;
-            }
+            
             if(!string.IsNullOrEmpty(txtCode.Text))
             {
                 using (var db = new DBContext())

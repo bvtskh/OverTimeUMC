@@ -315,3 +315,4 @@ C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\
 C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\ExcelDataReader.DataSet.xml
 C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormStatistic.resources
 C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\obj\Debug\OverTime.FormLogin.resources
+C:\Users\u42107\Desktop\ThanhDX\Thanh_Project\36 OverTime\OverTime\OverTime\bin\Debug\Dapper.xml

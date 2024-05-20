@@ -177,7 +177,7 @@ namespace OverTime
         {
             if (string.IsNullOrEmpty(cbbDept.Text))
             {
-                var result = RJMessageBox.Show("Chưa chọn bộ phận đăng ký tăng ca.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                RJMessageBox.Show("Chưa chọn bộ phận đăng ký tăng ca.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             CheckUserSaveData();

@@ -35,23 +35,23 @@ namespace OverTime
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHumanOT));
             this.dgvMain = new System.Windows.Forms.DataGridView();
-            this.cbbCustomer = new System.Windows.Forms.ComboBox();
-            this.cbbDept = new System.Windows.Forms.ComboBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtDateOverTime = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.cbbDept = new System.Windows.Forms.ComboBox();
+            this.cbbCustomer = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.uiSmoothLabel1 = new Sunny.UI.UISmoothLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSave = new OverTime.Button_AQ.AQButton();
             this.btnExport = new OverTime.Button_AQ.AQButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.uiSmoothLabel1 = new Sunny.UI.UISmoothLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvMain
@@ -93,50 +93,6 @@ namespace OverTime
             this.dgvMain.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMain_CellEndEdit);
             this.dgvMain.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMain_CellFormatting);
             // 
-            // cbbCustomer
-            // 
-            this.cbbCustomer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbCustomer.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbCustomer.FormattingEnabled = true;
-            this.cbbCustomer.Location = new System.Drawing.Point(292, 38);
-            this.cbbCustomer.Name = "cbbCustomer";
-            this.cbbCustomer.Size = new System.Drawing.Size(188, 27);
-            this.cbbCustomer.TabIndex = 38;
-            this.cbbCustomer.SelectedIndexChanged += new System.EventHandler(this.cbbCustomer_SelectedIndexChanged);
-            // 
-            // cbbDept
-            // 
-            this.cbbDept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbDept.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbDept.FormattingEnabled = true;
-            this.cbbDept.Location = new System.Drawing.Point(151, 38);
-            this.cbbDept.Name = "cbbDept";
-            this.cbbDept.Size = new System.Drawing.Size(128, 27);
-            this.cbbDept.TabIndex = 39;
-            this.cbbDept.SelectedIndexChanged += new System.EventHandler(this.cbbDept_SelectedIndexChanged);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.label22.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(153, 16);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(62, 19);
-            this.label22.TabIndex = 40;
-            this.label22.Text = "Bộ phận";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(294, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 19);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "Khách hàng";
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
@@ -166,17 +122,6 @@ namespace OverTime
             this.dtDateOverTime.Size = new System.Drawing.Size(131, 26);
             this.dtDateOverTime.TabIndex = 247;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.label5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(11, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 18);
-            this.label5.TabIndex = 246;
-            this.label5.Text = "Tháng";
-            // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(177)))), ((int)(((byte)(243)))));
@@ -195,6 +140,86 @@ namespace OverTime
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(11, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 18);
+            this.label5.TabIndex = 246;
+            this.label5.Text = "Tháng";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(294, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 19);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Khách hàng";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(153, 16);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(62, 19);
+            this.label22.TabIndex = 40;
+            this.label22.Text = "Bộ phận";
+            // 
+            // cbbDept
+            // 
+            this.cbbDept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbDept.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbDept.FormattingEnabled = true;
+            this.cbbDept.Location = new System.Drawing.Point(151, 38);
+            this.cbbDept.Name = "cbbDept";
+            this.cbbDept.Size = new System.Drawing.Size(128, 27);
+            this.cbbDept.TabIndex = 39;
+            this.cbbDept.SelectedIndexChanged += new System.EventHandler(this.cbbDept_SelectedIndexChanged);
+            // 
+            // cbbCustomer
+            // 
+            this.cbbCustomer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCustomer.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbCustomer.FormattingEnabled = true;
+            this.cbbCustomer.Location = new System.Drawing.Point(292, 38);
+            this.cbbCustomer.Name = "cbbCustomer";
+            this.cbbCustomer.Size = new System.Drawing.Size(188, 27);
+            this.cbbCustomer.TabIndex = 38;
+            this.cbbCustomer.SelectedIndexChanged += new System.EventHandler(this.cbbCustomer_SelectedIndexChanged);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel2.Controls.Add(this.uiSmoothLabel1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1148, 51);
+            this.panel2.TabIndex = 253;
+            // 
+            // uiSmoothLabel1
+            // 
+            this.uiSmoothLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(203)))), ((int)(((byte)(211)))));
+            this.uiSmoothLabel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.uiSmoothLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiSmoothLabel1.Location = new System.Drawing.Point(0, 0);
+            this.uiSmoothLabel1.Name = "uiSmoothLabel1";
+            this.uiSmoothLabel1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(110)))), ((int)(((byte)(222)))));
+            this.uiSmoothLabel1.Size = new System.Drawing.Size(284, 51);
+            this.uiSmoothLabel1.TabIndex = 0;
+            this.uiSmoothLabel1.Text = "NHÂN SỰ TĂNG CA";
+            this.uiSmoothLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -256,31 +281,6 @@ namespace OverTime
             this.btnExport.UseVisualStyleBackColor = false;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel2.Controls.Add(this.uiSmoothLabel1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1148, 51);
-            this.panel2.TabIndex = 253;
-            // 
-            // uiSmoothLabel1
-            // 
-            this.uiSmoothLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(203)))), ((int)(((byte)(211)))));
-            this.uiSmoothLabel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.uiSmoothLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiSmoothLabel1.Location = new System.Drawing.Point(0, 0);
-            this.uiSmoothLabel1.Name = "uiSmoothLabel1";
-            this.uiSmoothLabel1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(110)))), ((int)(((byte)(222)))));
-            this.uiSmoothLabel1.Size = new System.Drawing.Size(284, 51);
-            this.uiSmoothLabel1.TabIndex = 0;
-            this.uiSmoothLabel1.Text = "NHÂN SỰ TĂNG CA";
-            this.uiSmoothLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // FormHumanOT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,8 +298,8 @@ namespace OverTime
             ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -57,7 +57,7 @@ namespace OverTime
                         }
                         else
                         {
-                            lbUser.Text = "Read Only";
+                            lbUser.Text = "Read Only\nTài khoản khách";
                             Common.UserLogin.UserName = "View";
                             Common.UserLogin.Dept = "";
                         }
@@ -96,22 +96,7 @@ namespace OverTime
                 var assemblyName = System.Reflection.Assembly.GetExecutingAssembly().GetName();
                 _version = assemblyName.Version.ToString();
 
-                using (var ctx = new DBContext())
-                {
-                    var vers = ctx.Tbl_Version.ToList();
-                    vers = vers.OrderBy(x => x.Id).ToList();
-                    var VersionInfo = vers.LastOrDefault();
-                    this.Text = "Over Time System Management Ver:" + _version.ToString();
-                    Common.PathAppRun = string.Format(VersionInfo.Path, VersionInfo.Version);
-                    if (VersionInfo == null) return;
-                    if (VersionInfo.Version != _version)
-                    {
-                        string msg = string.Format("Đã lên version {0}. Hãy vào đường dẫn  {1}", VersionInfo.Version, Common.PathAppRun);
-                        MessageBox.Show(msg, "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        Application.Exit();
-                        return;
-                    }
-                }
+                this.Text = "Over Time System Management " + _version.ToString();      
             }
         }
 
@@ -178,7 +163,11 @@ namespace OverTime
 
         private void btnInputTime_Click(object sender, EventArgs e)
         {
-
+            if (Common.UserLogin.UserName == "View")
+            {
+                UIMessageTip.ShowWarning("Bạn không có quyền truy cập mục này!"); 
+                return;
+            }
             ContextMenuStrip menu = new ContextMenuStrip();
             menu.Font = new Font("Arial", 12, FontStyle.Bold);
             // Create menu options as labels

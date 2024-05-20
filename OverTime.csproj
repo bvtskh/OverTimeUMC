@@ -213,6 +213,7 @@
     <Compile Include="Business\GAMankuchi.cs" />
     <Compile Include="Business\GroupSupportHelper.cs" />
     <Compile Include="Business\LogHelper.cs" />
+    <Compile Include="Business\LoginHelper.cs" />
     <Compile Include="Business\OverTimeHelper.cs" />
     <Compile Include="Business\StatisticOvertimeHelper.cs" />
     <Compile Include="Business\SummaryHelper.cs" />

@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGAWorkSpace));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtDateOverTime = new System.Windows.Forms.DateTimePicker();
-            this.btnCheck = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGAWorkSpace));
+            this.dgvOverTime = new System.Windows.Forms.DataGridView();
+            this.dgvNotApprove = new System.Windows.Forms.DataGridView();
+            this.bgwExportExcel = new System.ComponentModel.BackgroundWorker();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnSendEmail = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,75 +45,91 @@
             this.btnExcelFileTotal = new System.Windows.Forms.Button();
             this.btnExcelDaily = new System.Windows.Forms.Button();
             this.btnLoadData = new System.Windows.Forms.Button();
-            this.dgvOverTime = new System.Windows.Forms.DataGridView();
-            this.dgvNotApprove = new System.Windows.Forms.DataGridView();
-            this.bgwExportExcel = new System.ComponentModel.BackgroundWorker();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtDateOverTime = new System.Windows.Forms.DateTimePicker();
+            this.btnCheck = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.uiSmoothLabel1 = new Sunny.UI.UISmoothLabel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOverTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotApprove)).BeginInit();
             this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // dgvOverTime
             // 
-            this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
-            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox1.Controls.Add(this.dtDateOverTime);
-            this.groupBox1.Controls.Add(this.btnCheck);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(224, 90);
-            this.groupBox1.TabIndex = 269;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thời gian";
+            this.dgvOverTime.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOverTime.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvOverTime.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOverTime.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvOverTime.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvOverTime.EnableHeadersVisualStyles = false;
+            this.dgvOverTime.Location = new System.Drawing.Point(0, 141);
+            this.dgvOverTime.Name = "dgvOverTime";
+            this.dgvOverTime.ReadOnly = true;
+            this.dgvOverTime.RowHeadersVisible = false;
+            this.dgvOverTime.Size = new System.Drawing.Size(1302, 401);
+            this.dgvOverTime.TabIndex = 271;
             // 
-            // dtDateOverTime
+            // dgvNotApprove
             // 
-            this.dtDateOverTime.CustomFormat = "dd/MMM/yyyy";
-            this.dtDateOverTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtDateOverTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDateOverTime.Location = new System.Drawing.Point(64, 20);
-            this.dtDateOverTime.Name = "dtDateOverTime";
-            this.dtDateOverTime.Size = new System.Drawing.Size(142, 26);
-            this.dtDateOverTime.TabIndex = 258;
+            this.dgvNotApprove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvNotApprove.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNotApprove.Location = new System.Drawing.Point(5, 229);
+            this.dgvNotApprove.Name = "dgvNotApprove";
+            this.dgvNotApprove.RowHeadersVisible = false;
+            this.dgvNotApprove.Size = new System.Drawing.Size(235, 150);
+            this.dgvNotApprove.TabIndex = 272;
             // 
-            // btnCheck
+            // bgwExportExcel
             // 
-            this.btnCheck.BackColor = System.Drawing.Color.Peru;
-            this.btnCheck.FlatAppearance.BorderSize = 0;
-            this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheck.Image = ((System.Drawing.Image)(resources.GetObject("btnCheck.Image")));
-            this.btnCheck.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCheck.Location = new System.Drawing.Point(87, 51);
-            this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(92, 34);
-            this.btnCheck.TabIndex = 244;
-            this.btnCheck.Text = "Check";
-            this.btnCheck.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCheck.UseVisualStyleBackColor = false;
-            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            this.bgwExportExcel.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwExportExcel_DoWork);
+            this.bgwExportExcel.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwExportExcel_RunWorkerCompleted);
             // 
-            // label5
+            // imageList1
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 24);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 18);
-            this.label5.TabIndex = 255;
-            this.label5.Text = "Ngày";
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 51);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1302, 90);
+            this.panel1.TabIndex = 273;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 542);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1302, 19);
+            this.panel2.TabIndex = 275;
             // 
             // groupBox2
             // 
@@ -152,7 +170,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 41);
             this.label1.Name = "label1";
@@ -224,67 +242,60 @@
             this.btnLoadData.UseVisualStyleBackColor = false;
             this.btnLoadData.Click += new System.EventHandler(this.btnLoadData_Click);
             // 
-            // dgvOverTime
+            // groupBox1
             // 
-            this.dgvOverTime.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOverTime.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvOverTime.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvOverTime.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvOverTime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvOverTime.EnableHeadersVisualStyles = false;
-            this.dgvOverTime.Location = new System.Drawing.Point(0, 141);
-            this.dgvOverTime.Name = "dgvOverTime";
-            this.dgvOverTime.ReadOnly = true;
-            this.dgvOverTime.RowHeadersVisible = false;
-            this.dgvOverTime.Size = new System.Drawing.Size(1302, 401);
-            this.dgvOverTime.TabIndex = 271;
+            this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.dtDateOverTime);
+            this.groupBox1.Controls.Add(this.btnCheck);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(224, 90);
+            this.groupBox1.TabIndex = 269;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thời gian";
             // 
-            // dgvNotApprove
+            // dtDateOverTime
             // 
-            this.dgvNotApprove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvNotApprove.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNotApprove.Location = new System.Drawing.Point(5, 229);
-            this.dgvNotApprove.Name = "dgvNotApprove";
-            this.dgvNotApprove.RowHeadersVisible = false;
-            this.dgvNotApprove.Size = new System.Drawing.Size(235, 150);
-            this.dgvNotApprove.TabIndex = 272;
+            this.dtDateOverTime.CustomFormat = "dd/MMM/yyyy";
+            this.dtDateOverTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDateOverTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtDateOverTime.Location = new System.Drawing.Point(64, 20);
+            this.dtDateOverTime.Name = "dtDateOverTime";
+            this.dtDateOverTime.Size = new System.Drawing.Size(142, 26);
+            this.dtDateOverTime.TabIndex = 258;
             // 
-            // bgwExportExcel
+            // btnCheck
             // 
-            this.bgwExportExcel.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwExportExcel_DoWork);
-            this.bgwExportExcel.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwExportExcel_RunWorkerCompleted);
+            this.btnCheck.BackColor = System.Drawing.Color.Peru;
+            this.btnCheck.FlatAppearance.BorderSize = 0;
+            this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheck.ForeColor = System.Drawing.Color.White;
+            this.btnCheck.Image = ((System.Drawing.Image)(resources.GetObject("btnCheck.Image")));
+            this.btnCheck.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCheck.Location = new System.Drawing.Point(87, 51);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(92, 34);
+            this.btnCheck.TabIndex = 244;
+            this.btnCheck.Text = "Check";
+            this.btnCheck.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCheck.UseVisualStyleBackColor = false;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
-            // imageList1
+            // label5
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 51);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1302, 90);
-            this.panel1.TabIndex = 273;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 18);
+            this.label5.TabIndex = 255;
+            this.label5.Text = "Ngày";
             // 
             // panel3
             // 
@@ -311,16 +322,6 @@
             this.uiSmoothLabel1.Text = "GA WORK SPACE";
             this.uiSmoothLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 542);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1302, 19);
-            this.panel2.TabIndex = 275;
-            // 
             // FormGAWorkSpace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,13 +338,13 @@
             this.Name = "FormGAWorkSpace";
             this.Text = "FormGAWorkSpace";
             this.Load += new System.EventHandler(this.FormGAWorkSpace_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOverTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNotApprove)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
