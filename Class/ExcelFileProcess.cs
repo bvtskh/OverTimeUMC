@@ -145,99 +145,208 @@ namespace OverTime
             return lstResult;
         }
 
-
-
-        public static List<Tbl_DailyOverTime> NewGetDataFingerFromExcelUsingNPOI(string PathFile)
+        public static List<Tbl_DailyOverTime> NewGetDataFingerFromExcelUsingNPOI1(string PathFile)
         {
-            CultureInfo provider = CultureInfo.InvariantCulture;
-            List<Tbl_DailyOverTime> lstResult = new List<Tbl_DailyOverTime>();
-
-            FileStream fs = new FileStream(PathFile, FileMode.Open, FileAccess.Read);
-            XSSFWorkbook wb = new XSSFWorkbook(fs);
-            ISheet sheet = wb.GetSheetAt(0);
-            var DateOT = new DateTime();
-            var rowDate = sheet.GetRow(3);
             try
             {
-                string Date = rowDate.GetCell(2).DateCellValue.ToString();
-                string[] d = Date.Split('/').ToArray();
-                int Day = Convert.ToInt16(d[0]);
-                int Month = Convert.ToInt16(d[1]);
-                int Year = Convert.ToInt16(d[2].Substring(0, 4));
-                DateOT = new DateTime(Year, Month, Day, 0, 0, 0);
-            }
-            catch
-            {
-                string Date = rowDate.GetCell(2).StringCellValue.ToString();
-                DateOT = DateTime.ParseExact(Date, "dd/MM/yyyy", provider);
-            }
-            for (int i = 8; i <= sheet.LastRowNum; i++)
-            {
-                var result = new Tbl_DailyOverTime();
-                var nowRow = sheet.GetRow(i);
-                result.DateOverTime = DateOT;
-                if (nowRow.GetCell(1) != null)
+                CultureInfo provider = CultureInfo.InvariantCulture;
+                List<Tbl_DailyOverTime> resultList = new List<Tbl_DailyOverTime>();
+                Workbook workbook = new Workbook();
+                workbook.LoadFromFile(PathFile);
+                Worksheet worksheet = workbook.Worksheets[0];
+                TimeSpan timeSpan = new TimeSpan();
+                double value;
+                TimeSpan timeIn = TimeSpan.Parse("00:00:00");
+                TimeSpan timeOut = TimeSpan.Parse("00:00:00");
+                double OTDay = 0f;
+                double AdjustOTDay = 0f;
+                double OTNight = 0f;
+                double AdjustOTNight = 0f;
+
+                DateTime dateTime;
+                if(!DateTime.TryParseExact(worksheet.Range[4, 3].DisplayedText, "dd/MM/yyyy", provider,DateTimeStyles.None, out dateTime))
                 {
-                    //result.Code = nowRow.GetCell(1).StringCellValue.ToString().Trim();
+                    MessageBox.Show("Sai định dạng ngày up dữ liệu vân tay!");
+                    return null;
+                }
+               
 
-                    try { result.Code = nowRow.GetCell(1).StringCellValue.ToString(); }
-                    catch { result.Code = nowRow.GetCell(1).NumericCellValue.ToString(); }
+                for (int i = 9; i <= worksheet.LastRow; i++)
+                {
+                    Tbl_DailyOverTime tbl_DailyOverTime = new Tbl_DailyOverTime();
+                    tbl_DailyOverTime.DateOverTime = dateTime;
 
-                    if (string.IsNullOrEmpty(result.Code))
+                    string code = worksheet.Range[i, 2].DisplayedText;
+                    if (string.IsNullOrEmpty(code)) continue;
+                    tbl_DailyOverTime.Code = code;
+                    string name = worksheet.Range[i, 3].DisplayedText;
+                    tbl_DailyOverTime.FullName =name;
+                    if(TimeSpan.TryParse(worksheet.Range[i, 4].DisplayedText, out timeSpan))
                     {
-                        break;
+                        tbl_DailyOverTime.TimeIn = timeSpan;
                     }
                     else
                     {
-                        result.FullName = (nowRow.GetCell(2) != null) ? nowRow.GetCell(2).StringCellValue : "";
+                        tbl_DailyOverTime.TimeIn = timeIn;
+                    }
 
-                        if (nowRow.GetCell(3) != null)
-                        {
-                            try
-                            {
-                                string StTimeIn = nowRow.GetCell(3).StringCellValue.ToString();
-                                result.TimeIn = TimeSpan.Parse(StTimeIn);
-                            }
-                            catch { result.TimeIn = TimeSpan.Parse("00:00:00"); }
-                        }
-                        if (nowRow.GetCell(4) != null)
-                        {
-                            try
-                            {
-                                string StTimeOut = nowRow.GetCell(4).StringCellValue.ToString();
-                                result.TimeOut = TimeSpan.Parse(StTimeOut);
-                            }
-                            catch { result.TimeOut = TimeSpan.Parse("00:00:00"); }
+                    if (TimeSpan.TryParse(worksheet.Range[i, 5].DisplayedText, out timeSpan))
+                    {
+                        tbl_DailyOverTime.TimeOut = timeSpan;
+                    }
+                    else
+                    {
+                        tbl_DailyOverTime.TimeOut = timeOut;
+                    }
 
-                        }
-                        if (nowRow.GetCell(5) != null)
+
+                    if (double.TryParse(worksheet.Range[i, 6].DisplayedText, out value))
+                    {
+                        tbl_DailyOverTime.OTDayShift = value;
+                    }
+                    else
+                    {
+                        tbl_DailyOverTime.OTDayShift = OTDay;
+                    }
+                    //--------------------
+                    if (double.TryParse(worksheet.Range[i, 7].DisplayedText, out value))
+                    {
+                        tbl_DailyOverTime.AdjustOTDayShift = value;
+                    }
+                    else
+                    {
+                        tbl_DailyOverTime.AdjustOTDayShift = AdjustOTDay;
+                    }
+                    //--------------------
+                    if (double.TryParse(worksheet.Range[i, 8].DisplayedText, out value))
+                    {
+                        tbl_DailyOverTime.OTNightShift = value;
+                    }
+                    else
+                    {
+                        tbl_DailyOverTime.OTNightShift = OTNight;
+                    }
+
+                    if (double.TryParse(worksheet.Range[i, 9].DisplayedText, out value))
+                    {
+                        tbl_DailyOverTime.AdjustOTNightShift = value;
+                    }
+                    else
+                    {
+                        tbl_DailyOverTime.AdjustOTDayShift = AdjustOTNight;
+                    }
+                    if (!code.Contains("UJ"))
+                    {
+                        resultList.Add(tbl_DailyOverTime);
+                    }
+                }
+
+                return resultList;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public static List<Tbl_DailyOverTime> NewGetDataFingerFromExcelUsingNPOI(string PathFile)
+        {
+            try
+            {
+                CultureInfo provider = CultureInfo.InvariantCulture;
+                List<Tbl_DailyOverTime> lstResult = new List<Tbl_DailyOverTime>();
+
+                FileStream fs = new FileStream(PathFile, FileMode.Open, FileAccess.Read);
+                XSSFWorkbook wb = new XSSFWorkbook(fs);
+                ISheet sheet = wb.GetSheetAt(0);
+                var DateOT = new DateTime();
+                var rowDate = sheet.GetRow(3);
+                try
+                {
+                    string Date = rowDate.GetCell(2).DateCellValue.ToString();
+                    string[] d = Date.Split('/').ToArray();
+                    int Day = Convert.ToInt16(d[0]);
+                    int Month = Convert.ToInt16(d[1]);
+                    int Year = Convert.ToInt16(d[2].Substring(0, 4));
+                    DateOT = new DateTime(Year, Month, Day, 0, 0, 0);
+                }
+                catch
+                {
+                    string Date = rowDate.GetCell(2).StringCellValue.ToString();
+                    DateOT = DateTime.ParseExact(Date, "dd/MM/yyyy", provider);
+                }
+                for (int i = 8; i <= sheet.LastRowNum; i++)
+                {
+                    var result = new Tbl_DailyOverTime();
+                    var nowRow = sheet.GetRow(i);
+                    result.DateOverTime = DateOT;
+                    if (nowRow.GetCell(1) != null)
+                    {
+                        //result.Code = nowRow.GetCell(1).StringCellValue.ToString().Trim();
+
+                        try { result.Code = nowRow.GetCell(1).StringCellValue.ToString(); }
+                        catch { result.Code = nowRow.GetCell(1).NumericCellValue.ToString(); }
+
+                        if (string.IsNullOrEmpty(result.Code))
                         {
-                            try { result.OTDayShift = Convert.ToDouble(nowRow.GetCell(5).StringCellValue.Trim()); }
-                            catch { result.OTDayShift = nowRow.GetCell(5).NumericCellValue; }
+                            break;
                         }
-                        if (nowRow.GetCell(6) != null)
+                        else
                         {
-                            try { result.AdjustOTDayShift = Convert.ToDouble(nowRow.GetCell(6).StringCellValue.Trim()); }
-                            catch { result.AdjustOTDayShift = nowRow.GetCell(6).NumericCellValue; }
-                        }
-                        if (nowRow.GetCell(7) != null)
-                        {
-                            try { result.OTNightShift = Convert.ToDouble(nowRow.GetCell(7).StringCellValue.Trim()); }
-                            catch { result.OTNightShift = nowRow.GetCell(7).NumericCellValue; }
-                        }
-                        if (nowRow.GetCell(8) != null)
-                        {
-                            try { result.AdjustOTNightShift = Convert.ToDouble(nowRow.GetCell(8).StringCellValue.Trim()); }
-                            catch { result.AdjustOTNightShift = nowRow.GetCell(8).NumericCellValue; }
-                        }
-                        if (!result.Code.Contains("UJ"))
-                        {
-                            lstResult.Add(result);
+                            result.FullName = (nowRow.GetCell(2) != null) ? nowRow.GetCell(2).StringCellValue : "";
+
+                            if (nowRow.GetCell(3) != null)
+                            {
+                                try
+                                {
+                                    string StTimeIn = nowRow.GetCell(3).StringCellValue.ToString();
+                                    result.TimeIn = TimeSpan.Parse(StTimeIn);
+                                }
+                                catch { result.TimeIn = TimeSpan.Parse("00:00:00"); }
+                            }
+                            if (nowRow.GetCell(4) != null)
+                            {
+                                try
+                                {
+                                    string StTimeOut = nowRow.GetCell(4).StringCellValue.ToString();
+                                    result.TimeOut = TimeSpan.Parse(StTimeOut);
+                                }
+                                catch { result.TimeOut = TimeSpan.Parse("00:00:00"); }
+
+                            }
+                            if (nowRow.GetCell(5) != null)
+                            {
+                                try { result.OTDayShift = Convert.ToDouble(nowRow.GetCell(5).StringCellValue.Trim()); }
+                                catch { result.OTDayShift = nowRow.GetCell(5).NumericCellValue; }
+                            }
+                            if (nowRow.GetCell(6) != null)
+                            {
+                                try { result.AdjustOTDayShift = Convert.ToDouble(nowRow.GetCell(6).StringCellValue.Trim()); }
+                                catch { result.AdjustOTDayShift = nowRow.GetCell(6).NumericCellValue; }
+                            }
+                            if (nowRow.GetCell(7) != null)
+                            {
+                                try { result.OTNightShift = Convert.ToDouble(nowRow.GetCell(7).StringCellValue.Trim()); }
+                                catch { result.OTNightShift = nowRow.GetCell(7).NumericCellValue; }
+                            }
+                            if (nowRow.GetCell(8) != null)
+                            {
+                                try { result.AdjustOTNightShift = Convert.ToDouble(nowRow.GetCell(8).StringCellValue.Trim()); }
+                                catch { result.AdjustOTNightShift = nowRow.GetCell(8).NumericCellValue; }
+                            }
+                            if (!result.Code.Contains("UJ"))
+                            {
+                                lstResult.Add(result);
+                            }
                         }
                     }
                 }
+                return lstResult;
             }
-            return lstResult;
+            catch (Exception)
+            {
+                return null;
+            }         
         }
 
 
@@ -303,7 +412,7 @@ namespace OverTime
                                           TimeRegisted = d.TimeRegisted,
                                           Balance = d.Balance,
                                           Comment = d.Comment,
-                                      }).ToList();
+                                      }).OrderBy(o=>o.Code).ToList();
 
 
             wb.Worksheets[0].Range["C5"].Value = lstDailyOT[0].DateOverTime.ToString("dd/MM/yyyy");

@@ -212,6 +212,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ATCommon\ATCommon.cs" />
+    <Compile Include="Business\BenefitOTHelper.cs" />
     <Compile Include="Business\DayOffHelper.cs" />
     <Compile Include="Business\FingerPrintsHelper.cs" />
     <Compile Include="Business\GAMankuchi.cs" />
@@ -253,6 +254,12 @@
     <Compile Include="DataBase\Tbl_Version.cs" />
     <Compile Include="DBUser\ContextUser.cs" />
     <Compile Include="Class\ExcelFileProcess.cs" />
+    <Compile Include="FormBenefit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBenefit.Designer.cs">
+      <DependentUpon>FormBenefit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormApplyForLeave.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -475,6 +482,9 @@
     <None Include="Resources\chat.png" />
     <EmbeddedResource Include="Button_AQ\AQButton.resx">
       <DependentUpon>AQButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBenefit.resx">
+      <DependentUpon>FormBenefit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormApplyForLeave.resx">
       <DependentUpon>FormApplyForLeave.cs</DependentUpon>

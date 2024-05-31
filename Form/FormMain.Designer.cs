@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelMain = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panelFunction = new System.Windows.Forms.Panel();
             this.btnEarlyOvertime = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnCheck = new System.Windows.Forms.Button();
@@ -39,14 +40,12 @@
             this.btnSpecialAdjust = new System.Windows.Forms.Button();
             this.btnEditOverTime = new System.Windows.Forms.Button();
             this.btnInputTime = new System.Windows.Forms.Button();
-            this.panelFunction = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dựToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhậpDựToánTăngCaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhậpNhânSựTăngCaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.theoDõiTăngCaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ThốngkêtăngcatoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hạnChếTăngCaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateLineCôngĐoạnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,6 +54,9 @@
             this.quảnLýNgàyNghỉToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ngàyNghỉƯuĐãiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ngàyNghỉCóLươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thốngKêTăngCaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bồiDưỡngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbUser = new Sunny.UI.UILabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -76,6 +78,25 @@
             // toolTip1
             // 
             this.toolTip1.AutomaticDelay = 100;
+            // 
+            // panelFunction
+            // 
+            this.panelFunction.BackColor = System.Drawing.Color.White;
+            this.panelFunction.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelFunction.BackgroundImage")));
+            this.panelFunction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelFunction.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelFunction.Controls.Add(this.btnEarlyOvertime);
+            this.panelFunction.Controls.Add(this.btnRegister);
+            this.panelFunction.Controls.Add(this.btnCheck);
+            this.panelFunction.Controls.Add(this.btnGAWorkSpace);
+            this.panelFunction.Controls.Add(this.btnSpecialAdjust);
+            this.panelFunction.Controls.Add(this.btnEditOverTime);
+            this.panelFunction.Controls.Add(this.btnInputTime);
+            this.panelFunction.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelFunction.Location = new System.Drawing.Point(0, 47);
+            this.panelFunction.Name = "panelFunction";
+            this.panelFunction.Size = new System.Drawing.Size(64, 782);
+            this.panelFunction.TabIndex = 55;
             // 
             // btnEarlyOvertime
             // 
@@ -189,25 +210,6 @@
             this.btnInputTime.UseVisualStyleBackColor = false;
             this.btnInputTime.Click += new System.EventHandler(this.btnInputTime_Click);
             // 
-            // panelFunction
-            // 
-            this.panelFunction.BackColor = System.Drawing.Color.White;
-            this.panelFunction.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelFunction.BackgroundImage")));
-            this.panelFunction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panelFunction.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelFunction.Controls.Add(this.btnEarlyOvertime);
-            this.panelFunction.Controls.Add(this.btnRegister);
-            this.panelFunction.Controls.Add(this.btnCheck);
-            this.panelFunction.Controls.Add(this.btnGAWorkSpace);
-            this.panelFunction.Controls.Add(this.btnSpecialAdjust);
-            this.panelFunction.Controls.Add(this.btnEditOverTime);
-            this.panelFunction.Controls.Add(this.btnInputTime);
-            this.panelFunction.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelFunction.Location = new System.Drawing.Point(0, 47);
-            this.panelFunction.Name = "panelFunction";
-            this.panelFunction.Size = new System.Drawing.Size(64, 782);
-            this.panelFunction.TabIndex = 55;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -233,11 +235,12 @@
             this.dựToánToolStripMenuItem,
             this.gAToolStripMenuItem,
             this.quảnLýVânTayToolStripMenuItem,
-            this.quảnLýNgàyNghỉToolStripMenuItem});
+            this.quảnLýNgàyNghỉToolStripMenuItem,
+            this.thốngKêToolStripMenuItem});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(467, 47);
+            this.menuStrip1.Size = new System.Drawing.Size(689, 47);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -248,8 +251,7 @@
             this.dựToánToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nhậpDựToánTăngCaToolStripMenuItem,
             this.nhậpNhânSựTăngCaToolStripMenuItem,
-            this.theoDõiTăngCaToolStripMenuItem,
-            this.ThốngkêtăngcatoolStripMenuItem});
+            this.theoDõiTăngCaToolStripMenuItem});
             this.dựToánToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.dựToánToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("dựToánToolStripMenuItem.Image")));
             this.dựToánToolStripMenuItem.Name = "dựToánToolStripMenuItem";
@@ -279,14 +281,6 @@
             this.theoDõiTăngCaToolStripMenuItem.Size = new System.Drawing.Size(231, 24);
             this.theoDõiTăngCaToolStripMenuItem.Text = "Theo dõi tăng ca";
             this.theoDõiTăngCaToolStripMenuItem.Click += new System.EventHandler(this.theoDõiTăngCaToolStripMenuItem_Click);
-            // 
-            // ThốngkêtăngcatoolStripMenuItem
-            // 
-            this.ThốngkêtăngcatoolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("ThốngkêtăngcatoolStripMenuItem.Image")));
-            this.ThốngkêtăngcatoolStripMenuItem.Name = "ThốngkêtăngcatoolStripMenuItem";
-            this.ThốngkêtăngcatoolStripMenuItem.Size = new System.Drawing.Size(231, 24);
-            this.ThốngkêtăngcatoolStripMenuItem.Text = "Thống kê tăng ca";
-            this.ThốngkêtăngcatoolStripMenuItem.Click += new System.EventHandler(this.ThốngkêtăngcatoolStripMenuItem_Click);
             // 
             // gAToolStripMenuItem
             // 
@@ -366,6 +360,33 @@
             this.ngàyNghỉCóLươngToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
             this.ngàyNghỉCóLươngToolStripMenuItem.Text = "Đăng kí nghỉ";
             this.ngàyNghỉCóLươngToolStripMenuItem.Click += new System.EventHandler(this.ngàyNghỉCóLươngToolStripMenuItem_Click);
+            // 
+            // thốngKêToolStripMenuItem
+            // 
+            this.thốngKêToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("thốngKêToolStripMenuItem.BackgroundImage")));
+            this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thốngKêTăngCaToolStripMenuItem1,
+            this.bồiDưỡngToolStripMenuItem});
+            this.thốngKêToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("thốngKêToolStripMenuItem.Image")));
+            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
+            this.thốngKêToolStripMenuItem.Text = "Thống kê";
+            // 
+            // thốngKêTăngCaToolStripMenuItem1
+            // 
+            this.thốngKêTăngCaToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("thốngKêTăngCaToolStripMenuItem1.Image")));
+            this.thốngKêTăngCaToolStripMenuItem1.Name = "thốngKêTăngCaToolStripMenuItem1";
+            this.thốngKêTăngCaToolStripMenuItem1.Size = new System.Drawing.Size(206, 24);
+            this.thốngKêTăngCaToolStripMenuItem1.Text = "Thống kê tăng ca";
+            this.thốngKêTăngCaToolStripMenuItem1.Click += new System.EventHandler(this.thốngKêTăngCaToolStripMenuItem1_Click);
+            // 
+            // bồiDưỡngToolStripMenuItem
+            // 
+            this.bồiDưỡngToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("bồiDưỡngToolStripMenuItem.Image")));
+            this.bồiDưỡngToolStripMenuItem.Name = "bồiDưỡngToolStripMenuItem";
+            this.bồiDưỡngToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
+            this.bồiDưỡngToolStripMenuItem.Text = "Bồi dưỡng tăng ca";
+            this.bồiDưỡngToolStripMenuItem.Click += new System.EventHandler(this.bồiDưỡngToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -462,7 +483,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ToolStripMenuItem ThốngkêtăngcatoolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thốngKêTăngCaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem bồiDưỡngToolStripMenuItem;
     }
 }
 

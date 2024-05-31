@@ -205,7 +205,7 @@ namespace OverTime
 
             using (var db = new DBContext())
             {
-                lstOverTime = db.Tbl_DailyOverTime.Where(x => x.DateOverTime == dateSelect).ToList();
+                lstOverTime = db.Tbl_DailyOverTime.Where(x => x.DateOverTime == dateSelect).OrderBy(o => o.Code).ToList();
                 var lstNotApprove = lstOverTime.Where(x => (x.TotalOT != 0) || (x.TimeOTDept != null && x.TimeOTDept != 0)).ToList();
                 var lstDeptNotApprove = (from a in lstNotApprove
                                          join h in lstHumanInfoWorking on a.Code equals h.AltCode

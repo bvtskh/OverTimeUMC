@@ -53,7 +53,7 @@ namespace OverTime
                 //string paratest = "QALeader|*QA-4|QA-REPAIR|QA - ISO|QA - QC";
                 //string paratest = "LCALeader|*LCA-12|PI - LCA";
                 //string paratest = "PCLeader|*PC-8|PMC - PC";
-                string paratest = "19|umcvn|GA - GA|ADM - FAC|PD";
+                //string paratest = "19|umcvn|GA - GA|ADM - FAC|PD";
                 //string paratest = "28548|umcvn|GA - GA|ADM - FAC|PD";
                 //string paratest = "UJ00070|umcvn|SALES|SALES - BC";
                 //string paratest = "231|umcvn|SALES|SALES - BC";

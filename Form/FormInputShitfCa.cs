@@ -25,7 +25,7 @@ namespace OverTime
             FileDlg.RestoreDirectory = true;
             if (FileDlg.ShowDialog() == DialogResult.OK)
             {
-                var destinationPath = $@"\\172.28.10.12\DX Center\ThanhDX\ShiftCa_{DateTime.Now.ToString("ddMMyyyy hhmmss")}.xlsx";
+                var destinationPath = $@"\\172.28.10.12\DX Center\ThanhDX\Shift ca\ShiftCa_{DateTime.Now.ToString("ddMMyyyy hhmmss")}.xlsx";
                 ATCommon.ATCommon.CopyExcelFile(FileDlg.FileName, destinationPath);
                 DataTable dataTable = ExcelFileProcess.GetShiftCaData(FileDlg.FileName);
                 dgvShiftCa.DataSource = dataTable;

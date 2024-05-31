@@ -35,10 +35,10 @@ namespace OverTime
             FileDlg.RestoreDirectory = true;
             if (FileDlg.ShowDialog() == DialogResult.OK)
             {
-                var destinationPath = $@"\\172.28.10.12\DX Center\ThanhDX\Vân tay {DateTime.Now.ToString("ddMMyyyy hhmmss")}.xlsx";
+                var destinationPath = $@"\\172.28.10.12\DX Center\ThanhDX\Vân tay\Vân tay {DateTime.Now.ToString("ddMMyyyy hhmmss")}.xlsx";
                 ATCommon.ATCommon.CopyExcelFile(FileDlg.FileName, destinationPath);
-                Common.RunProcess("LoadTitle.exe");
-                lstFingerPrint = ExcelFileProcess.NewGetDataFingerFromExcelUsingNPOI(FileDlg.FileName);
+                //Common.RunProcess("LoadTitle.exe");
+                lstFingerPrint = ExcelFileProcess.NewGetDataFingerFromExcelUsingNPOI1(FileDlg.FileName);
 
                 if (lstFingerPrint.Count > 0)
                 {
@@ -47,7 +47,7 @@ namespace OverTime
                     lstFingerPrint = UpdateCaLamViec(lstFingerPrint, DateSelect);
                     // Tính tổng thời gian overTime
                     lstFingerPrint = CalculationOverTime(lstFingerPrint, DateSelect);
-                    Common.KillProcess("LoadTitle");
+                    //Common.KillProcess("LoadTitle");
                     dgvTimeInOut.DataSource = null;
                     dgvTimeInOut.DataSource = lstFingerPrint;
                     dgvTimeInOut.Columns[0].Frozen = true;
@@ -310,6 +310,7 @@ namespace OverTime
             var lstUpdate = UpdateDataOverTimeToTableSummaryOT();
             lstUpdate = lstUpdate.OrderBy(x => x.Code).ToList();
             ConvertListDetilSummaryAndSaveToDB(lstUpdate);
+            MailProcess.SendEmailToQLC(DateSelect);
             Common.KillProcess("LoadTitle");
         }
 

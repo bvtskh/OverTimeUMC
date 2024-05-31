@@ -148,7 +148,7 @@ namespace OverTime.Business
                     dt.Columns.Add("Lý do", typeof(string));
                     dt.Columns.Add("User ĐK", typeof(string));
                     dt.Columns.Add("Công việc", typeof(string));
-                    foreach (var item in resultList)
+                    foreach (var item in resultList.OrderBy(o=>o.Code))
                     {
                         dt.Rows.Add(new object[]
                         {
@@ -648,7 +648,8 @@ namespace OverTime.Business
                 List<AdjustOverTime> lstSearchDept = new List<AdjustOverTime>();
                 if (Dept == "PD")
                 {
-                    lstSearchDept = lstResult.Where(x => x.Dept == Dept && x.Customer != null && x.Customer.Contains(Customer)).ToList();
+                    lstSearchDept = lstResult.Where(x => x.Dept == Dept && x.Customer != null && x.Customer.Contains(Customer) ).ToList();
+                    //var lstSearchDept1 = lstResult.Where(x => x.Dept == Dept && x.Customer != null && x.Customer.Contains(Customer) && string.IsNullOrEmpty(x.Shift)).ToList();
                 }
                 else
                 {

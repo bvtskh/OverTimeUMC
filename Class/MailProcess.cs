@@ -1,5 +1,6 @@
 ﻿using NPOI.SS.Formula.Functions;
 using OverTime.DataBase;
+using Sunny.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace OverTime
 {
@@ -235,6 +237,76 @@ namespace OverTime
                 }
             }
             return lstResult;
+        }
+
+        internal static void SendEmailToQLC(DateTime dateSelect)
+        {
+            try
+            {
+                using (var db = new DBContext())
+                {
+                    var emailQLC = db.Tbl_User.Where(w => w.Role != null && w.Role.Trim() == "Limitted").Select(s => s.Email).Distinct().ToList();
+                    if (emailQLC.Count > 0)
+                    {
+                        #region conten
+                        string content = $@"<!DOCTYPE html>
+	                                <html lang=""en"">
+	                                <head>
+		                                <meta charset=""UTF-8"">
+		                                <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+		
+		                                <title>Thông báo xác nhận tăng ca</title>
+		
+	                                </head>
+	                                <body>
+                                        <p>Dear ALL QLC,</p>
+ 		                                <p style='margin:0;font-family:arial,,helvetica,sans-serif;line-height:15px;color:#333333;font-size:14px; '>Bạn nhận được email này từ hệ thống thông báo tự động của DX</p>
+                                        <br>
+		                                <p style='margin:0;font-family:arial,,helvetica,sans-serif;line-height:15px;color:black font-size:14px; '>GA đã nhập dữ liệu vân tay ngày: {dateSelect.ToString("dd-MM-yyyy")} lên hệ thống, QLC của bộ phận vui lòng xác nhận điều chỉnh tăng ca!</p>
+		                                <br>
+		                                <a href='{Common.PathAppRun}'>[CLICK HERE TO OPEN SOFTWARE]</a>		
+		                                <br>
+
+		                                <br>
+		                                Admin contact: <a href='mailto:quyetpv@umcvn.com' target='_blank'>quyetpv@umcvn.com</a><br>
+		                                Department: <strong>PI-DX</strong><br>
+		                                Ex: 0972.089.889/ 3143
+		                                </p>
+                                </ body >
+
+                                </ html > 
+                                ";
+                        #endregion
+                        MailMessage message = new MailMessage();
+                        // message.From = new MailAddress("LCA_Program_Group@umcvn.com", "", System.Text.Encoding.UTF8);
+                        message.From = new MailAddress("DXsystem@umcvn.com", "", System.Text.Encoding.UTF8);
+
+                        foreach (var item in emailQLC)
+                            if (!string.IsNullOrEmpty(item))
+                                message.To.Add(item);
+                        //send html format
+                        message.IsBodyHtml = true;
+                        message.Body = content;
+                        
+
+                        message.Subject = "[Thông báo] Điều chỉnh tăng ca";
+                        message.SubjectEncoding = System.Text.Encoding.UTF8;
+
+                        SmtpClient client = new SmtpClient("smtp.office365.com", 587);
+                        client.EnableSsl = true;
+
+                        //client.Credentials = new System.Net.NetworkCredential("LCA_Program_Group@umcvn.com", "Lcagroup2021"); //"LCA_Program_Group@umcvn.com",""
+                        client.Credentials = new System.Net.NetworkCredential("DXsystem@umcvn.com", "Lca@12345"); // thay đổi mail DX
+                        client.Send(message);
+
+                        message.Dispose();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return;
+            }   
         }
     }
 

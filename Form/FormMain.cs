@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -16,6 +17,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace OverTime
 {
@@ -96,7 +98,7 @@ namespace OverTime
                 var assemblyName = System.Reflection.Assembly.GetExecutingAssembly().GetName();
                 _version = assemblyName.Version.ToString();
 
-                this.Text = "Over Time System Management " + _version.ToString();      
+                this.Text = "Over Time System Management " + _version.ToString();
             }
         }
 
@@ -119,19 +121,19 @@ namespace OverTime
 
         private void ChangeColorButton(Button button)
         {
-            button.BackColor= Color.White;
-            this.panelFunction.Controls.OfType<Button>().Where(w=>w != button).ForEach(f=>f.BackColor = Color.Gray);
+            button.BackColor = Color.White;
+            this.panelFunction.Controls.OfType<Button>().Where(w => w != button).ForEach(f => f.BackColor = Color.Gray);
         }
 
         Button originButton;
         private void ChangeLocation(Button button)
         {
-            if(originButton == null)
+            if (originButton == null)
             {
                 originButton = btnRegister;// button gốc.
             }
 
-            Point originPoint = new Point(10,15);// tọa độ gốc
+            Point originPoint = new Point(10, 15);// tọa độ gốc
 
             //tọa độ button đang chọn để đẩy lên đầu.
             Point buttonSelectPoint = button.Location;
@@ -165,7 +167,7 @@ namespace OverTime
         {
             if (Common.UserLogin.UserName == "View")
             {
-                UIMessageTip.ShowWarning("Bạn không có quyền truy cập mục này!"); 
+                UIMessageTip.ShowWarning("Bạn không có quyền truy cập mục này!");
                 return;
             }
             ContextMenuStrip menu = new ContextMenuStrip();
@@ -175,7 +177,7 @@ namespace OverTime
             ToolStripMenuItem option2 = new ToolStripMenuItem("Cập nhật Shift ca");
             option1.Image = Properties.Resources.finger;
             option2.Image = Properties.Resources.excel;
-           
+
             menu.Items.Add(option1);
             menu.Items.Add(option2);
 
@@ -191,7 +193,7 @@ namespace OverTime
             if (button != null)
             {
                 ChangeColorButton(button);
-            }         
+            }
         }
 
         private void Option2_Click(object sender, EventArgs e)
@@ -203,7 +205,7 @@ namespace OverTime
             {
                 try
                 {
-                    var destinationPath = $@"\\172.28.10.12\DX Center\ThanhDX\ShiftCa_{DateTime.Now.ToString("ddMMyyyy hhmmss")}.xlsx";
+                    var destinationPath = $@"\\172.28.10.12\DX Center\ThanhDX\Shift ca\ShiftCa_{DateTime.Now.ToString("ddMMyyyy hhmmss")}.xlsx";
                     ATCommon.ATCommon.CopyExcelFile(FileDlg.FileName, destinationPath);
                     if (!File.Exists(FileDlg.FileName)) return;
                     DataTable dataTable = ExcelFileProcess.GetShiftCaData(FileDlg.FileName);
@@ -241,7 +243,7 @@ namespace OverTime
                     else
                     {
                         CommonProject.MsgBox_AQ.RJMessageBox.Show("File sai định dạng", "Lỗi cập nhật", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                        return ;
+                        return;
                     }
                 }
                 catch (IOException)
@@ -337,7 +339,7 @@ namespace OverTime
 
         private void RequestCompleted(DataTable dt)
         {
-            
+
         }
 
         private DataTable GetData()
@@ -435,9 +437,70 @@ namespace OverTime
             new FormApplyForLeave().Show();
         }
 
-        private void ThốngkêtăngcatoolStripMenuItem_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection("data source=172.28.10.28;initial catalog=HumanManagement;persist security info=True;user id=sa;password=umc@123"))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM Tbl_HumanInfo " +
+                        "where QuitDate is null and Position not like '%Operator%'";
+
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                    adapter.Fill(dt);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message);
+                }
+            }
+            using (SqlConnection connection = new SqlConnection("data source=172.28.10.22;initial catalog=PI_BASE;persist security info=True;user id=dev;password=umc@123"))
+            {
+                try
+                {
+                    connection.Open();
+
+                    foreach (DataRow dataRow in dt.Rows)
+                    {
+                        string code = dataRow.Field<string>("AltCode");
+                        string dept = dataRow.Field<string>("Department");
+                        string name = dataRow.Field<string>("FullName");
+
+                        string query = @"
+                                    IF EXISTS (SELECT * FROM Users WHERE Code = @Code)
+                                        UPDATE Users SET Dept = @Dept WHERE Code = @Code
+                                    ELSE
+                                        INSERT INTO Users (Code, FullName, Dept, Password) VALUES (@Code, @Name, @Dept,@Pass)";       
+
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@Code", code);
+                            command.Parameters.AddWithValue("@Name", name);
+                            command.Parameters.AddWithValue("@Dept", dept);
+                            command.Parameters.AddWithValue("@Pass", "umcvn");
+                            int rowsAffected = command.ExecuteNonQuery();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message);
+                }
+            }
+        }
+
+        private void thốngKêTăngCaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             new FormStatistic().Show();
+        }
+
+        private void bồiDưỡngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FormBenefit().Show();
         }
     }
 }

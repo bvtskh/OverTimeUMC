@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Hopstarter-Soft-Scraps-Clock.ico" asmv2:publisher="Thanh Hai LCA" asmv2:product="OverTime" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="OverTime" version="1.0.0.23" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="OverTime" version="1.0.0.27" language="neutral" processorArchitecture="msil" />
     <commandLine file="OverTime.exe" parameters="" />
   </entryPoint>
   <co.v1:useManifestForTrust xmlns="urn:schemas-microsoft-com:asm.v1" />
@@ -320,14 +320,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OverTime.exe" size="9462272">
-      <assemblyIdentity name="OverTime" version="1.0.0.23" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OverTime.exe" size="9575936">
+      <assemblyIdentity name="OverTime" version="1.0.0.27" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Ja9zad4lXwNab119eYlQZRSdyTj3YJXzyyRFH7CYT+I=</dsig:DigestValue>
+        <dsig:DigestValue>hWREu3YJLnEMv+eqrVlUcyvHAgUVfnBZpYcU4e87COs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

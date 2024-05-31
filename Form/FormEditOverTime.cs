@@ -74,8 +74,8 @@ namespace OverTime
                 dgvAdjustOverTime.Columns["Col_TimeDept"].ReadOnly = false;
             }
             lstAdjustSearch.Clear();
-            lstAdjustSearch = OverTimeHelper.LoadAllListToAdjustOverTime(dtDateOverTime.Value.Date, cbbDept.Text, cbbCustomer.Text, cbbLine.Text);
-            lstDifferentSearch = lstAdjustSearch.Where(x => x.Balance != 0 || x.Comment != null).ToList();
+            lstAdjustSearch = OverTimeHelper.LoadAllListToAdjustOverTime(dtDateOverTime.Value.Date, cbbDept.Text, cbbCustomer.Text, cbbLine.Text).OrderBy(o => o.Code).ToList();
+            lstDifferentSearch = lstAdjustSearch.Where(x => x.Balance != 0 || x.Comment != null).OrderBy(o => o.Code).ToList();
             AddListAdjustToDgv(lstAdjustSearch);
             cbbStatus_SelectedIndexChanged(null, null);
             cbbStatus.SelectedIndex = 2;

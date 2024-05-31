@@ -118,8 +118,8 @@ namespace OverTime
             lstAdjustSearch.Clear();
             lstAdjustOTFull = OverTimeHelper.LoadAllListToAdjustOverTime(dtDateOverTime.Value.Date, Dept);
             ClearOverTimePositionManager();
-            lstAdjustSearch = lstAdjustOTFull.Where(x => x.Dept == Dept).ToList();
-            var lstNotConfirm = lstAdjustSearch.Where(x => x.Balance != 0 && string.IsNullOrEmpty(x.Comment)).ToList();
+            lstAdjustSearch = lstAdjustOTFull.Where(x => x.Dept == Dept).OrderBy(o=>o.Code).ToList();
+            var lstNotConfirm = lstAdjustSearch.Where(x => x.Balance != 0 && string.IsNullOrEmpty(x.Comment)).OrderBy(o => o.Code).ToList();
             dgvConfirmOT.DataSource = null;
             if (cbViewAll.Checked == false)
             {
